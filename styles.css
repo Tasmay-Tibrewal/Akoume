@@ -1,0 +1,231 @@
+::-webkit-scrollbar { 
+    width: 10px;         /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {  
+    background-color: transparent; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(219, 239, 237); /* Color of the scrollbar thumb (handle) */ 
+    border-radius: 5px;         /* Round the edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(189, 209, 207); /* Color of the scrollbar thumb (handle) */ 
+    border-radius: 5px;         /* Round the edges */
+}
+
+html, body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    z-index: 0;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+    /* box-sizing: border-box; */
+    /* overflow-y: visible;  */
+}
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth{
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(219, 239, 237);
+
+}
+
+p{
+    font-size: 20px;
+}
+
+.cover {
+    position: relative;
+    z-index: 3;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: rgba(219, 239, 237, 0.2);
+    width: 100%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.akoume {
+    height: 65px;
+    width: 110px;
+    margin-left: 3%;
+    margin-top: 5px;
+
+    background-image: url("akoume logo2.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline;
+}
+
+.title{
+    padding-left: 1%;
+    flex-grow: 1;
+    text-align: left;
+    padding-right: 10px;
+    /* flex: 1; */
+}
+
+.title > * {
+    text-decoration: none;
+    color: black;
+}
+
+.links {
+    margin-top: 5px;
+    /* flex-grow: 1; */
+    /* flex: 1; */
+    display: flex;
+    justify-content: space-around;
+    font-size: large;
+    font-weight: 700;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.links > * {
+    padding-left: 22px;
+    padding-right: 23px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown {
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    overflow-y: auto;
+}
+
+.dropbtn {
+    background-image: url('Hamburger_icon.svg');
+    height: 32px;
+    width: 32px;
+    display: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.dropdown-content {
+    display: none;
+    background-color: rgb(219, 239, 237);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.dropdown-content > ul {
+    margin-top: 120px;
+    font-size: 40px;
+    margin-left: 20px;
+}
+.dropdown-content > ul > li {
+    margin-top: 20px;
+}
+
+.dropdown-content > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.bg-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    background-image: url("cover-2.jpg");
+    width: 65%;
+    min-height: 820px;
+    background-color: rgb(219, 239, 237);
+    background-repeat: no-repeat;  
+    background-size: contain;
+    background-position: right center;
+    border-bottom: 50%;
+}
+
+.post-cover {
+    position: absolute;
+    z-index: 2;
+
+    left: 0;
+    top: 43px;
+
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2.5%;
+    width: 38%;
+}
+
+.cover-desc{
+    display: flex;
+    min-height: 620px;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.cover-desc-title{
+    font-size: 45px;
+    font-weight: 600;
+    margin-top: 15%;
+}
+
+.cover-desc-desc{
+    margin-top: 0%;
+    word-spacing: 3px;
+    line-height: 1.5;
+}
+
+.cover-desc > a {
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 250px;
+    border-radius: 30px;
+    background-color: rgb(89, 182, 164);
+    color: rgb(219, 239, 237);
+    align-self: flex-start;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    border: 5px solid rgb(89, 182, 164);
+    text-decoration: none;
+}
+
+.cover-desc > a:hover {
+    background-color: rgb(219, 239, 237);
+    color: rgb(89, 182, 164);
+    transition: all 0.1s ease-in-out;
+}
