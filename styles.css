@@ -1,26 +1,9 @@
-::-webkit-scrollbar { 
-    width: 10px;         /* Width of the entire scrollbar */
-}
-
-::-webkit-scrollbar-track {  
-    background-color: transparent; /* Color of the scrollbar track */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(219, 239, 237); /* Color of the scrollbar thumb (handle) */ 
-    border-radius: 5px;         /* Round the edges */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(189, 209, 207); /* Color of the scrollbar thumb (handle) */ 
-    border-radius: 5px;         /* Round the edges */
-}
-
 html, body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     z-index: 0;
     overflow-x: hidden; 
+    overflow-y: hidden;
     scroll-behavior: smooth;
     /* box-sizing: border-box; */
     /* overflow-y: visible;  */
@@ -212,7 +195,6 @@ p{
 .cover-desc > a {
     width: 200px;
     margin-top: 5px;
-    margin-bottom: 250px;
     border-radius: 30px;
     background-color: rgb(89, 182, 164);
     color: rgb(219, 239, 237);
@@ -228,4 +210,457 @@ p{
     background-color: rgb(219, 239, 237);
     color: rgb(89, 182, 164);
     transition: all 0.1s ease-in-out;
+}
+
+.work {
+    position: absolute;
+    z-index: 2;
+
+    left: 0;
+    top: 850px;
+    
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: linear-gradient(rgb(219, 239, 237),rgb(193, 247, 255));
+}
+
+.work-desc-title{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.work-desc-desc{
+    text-align: center;
+    margin-top: 0%;
+    word-spacing: 3px;
+    line-height: 1.5;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.work-desc{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 45px;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 150px;
+}
+
+.work-desc > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pathways {
+    background-image: url("letter.png");
+    filter: blur(1px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pathways-text{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 15;
+    transform: translate(0px,-300px);
+}
+
+.pathways-text:hover > *{
+    transform: translateY(calc(-50% + 50px));
+    transition: all 0.15s ease-in-out;
+}
+
+.pathways-text > *{
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(calc(-50% + 150px));
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+}
+
+.pathways-desc {
+    height: 300px;
+    width: 300px;
+    z-index: 14;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(0px,-300px);
+}
+
+.pathways-text:hover + .pathways-desc{
+    visibility: visible;
+    transition: all 0.15s ease-in-out;
+}
+
+.pathways-desc > * {
+    margin: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(calc(-50% + 175px));
+
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
+.echoes {
+    background-image: url("echo.jpg");
+    filter: blur(1px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.echoes-text{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 15;
+    transform: translate(0px,-300px);
+}
+
+.echoes-text:hover > *{
+    transform: translateY(calc(-50% + 50px));
+    transition: all 0.15s ease-in-out;
+}
+
+.echoes-text > *{
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(calc(-50% + 150px));
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+}
+
+.echoes-desc {
+    height: 300px;
+    width: 300px;
+    z-index: 14;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(0px,-300px);
+}
+
+.echoes-text:hover + .echoes-desc{
+    visibility: visible;
+    transition: all 0.15s ease-in-out;
+}
+
+.echoes-desc > * {
+    margin: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(calc(-50% + 175px));
+
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
+.heartlines {
+    background-image: url("heartlines.jpg");
+    filter: blur(1.2px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.heartlines-text{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 15;
+    transform: translate(0px,-300px);
+}
+
+.heartlines-text:hover > *{
+    transform: translateY(calc(-50% + 50px));
+    transition: all 0.15s ease-in-out;
+}
+
+.heartlines-text > *{
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(calc(-50% + 150px));
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+}
+
+.heartlines-desc {
+    height: 300px;
+    width: 300px;
+    z-index: 14;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.13);
+    transform: translate(0px,-300px);
+}
+
+.heartlines-text:hover + .heartlines-desc{
+    visibility: visible;
+    transition: all 0.15s ease-in-out;
+}
+
+.heartlines-desc > * {
+    margin: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(calc(-50% + 175px));
+
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
+.whispers {
+    background-image: url("whispers.jpg");
+    filter: blur(1.2px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.whispers-text{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 15;
+    transform: translate(0px,-300px);
+}
+
+.whispers-text:hover > *{
+    transform: translateY(calc(-50% + 50px));
+    transition: all 0.15s ease-in-out;
+}
+
+.whispers-text > *{
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(calc(-50% + 150px));
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+}
+
+.whispers-desc {
+    height: 300px;
+    width: 300px;
+    z-index: 14;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.13);
+    transform: translate(0px,-300px);
+}
+
+.whispers-text:hover + .whispers-desc{
+    visibility: visible;
+    transition: all 0.15s ease-in-out;
+}
+
+.whispers-desc > * {
+    margin: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(calc(-50% + 175px));
+
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
+.ripples {
+    background-image: url("ripples.jpg");
+    filter: blur(1.2px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ripples-text{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 15;
+    transform: translate(0px,-300px);
+}
+
+.ripples-text:hover > *{
+    transform: translateY(calc(-50% + 40px));
+    transition: all 0.15s ease-in-out;
+}
+
+.ripples-text > *{
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(calc(-50% + 150px));
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+}
+
+.ripples-desc {
+    height: 300px;
+    width: 300px;
+    z-index: 14;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.13);
+    transform: translate(0px,-300px);
+}
+
+.ripples-text:hover + .ripples-desc{
+    visibility: visible;
+    transition: all 0.15s ease-in-out;
+}
+
+.ripples-desc > * {
+    margin: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(calc(-50% + 175px));
+
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
+.steps {
+    background-image: url("steps.jpg");
+    filter: blur(1.2px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.steps-text{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 15;
+    transform: translate(0px,-300px);
+}
+
+.steps-text:hover > *{
+    transform: translateY(calc(-50% + 40px));
+    transition: all 0.15s ease-in-out;
+}
+
+.steps-text > *{
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: translateY(calc(-50% + 150px));
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+}
+
+.steps-desc {
+    height: 300px;
+    width: 300px;
+    z-index: 14;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.13);
+    transform: translate(0px,-300px);
+}
+
+.steps-text:hover + .steps-desc{
+    visibility: visible;
+    transition: all 0.15s ease-in-out;
+}
+
+.steps-desc > * {
+    margin: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(calc(-50% + 175px));
+
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
 }

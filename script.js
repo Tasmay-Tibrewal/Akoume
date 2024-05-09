@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const myDiv5 = document.getElementById("dropbtn");
     const myDiv6 = document.getElementById("dropdown-content");
     const myDiv7 = document.getElementById("dropdown-list");
+    const myDiv8 = document.getElementById("work-text");
 
     const Home = document.getElementById("Home");
     const About = document.getElementById("About");
@@ -59,6 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
             myDiv3.style.alignSelf = "center";
             myDiv4.style.display = "none";
             myDiv5.style.display = "block";
+            const toppos = myDiv3.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
+            myDiv8.style.top = (toppos + 200.0) + "px";
+            console.log((toppos + 200.0) + "px");
         }
 
         else {
@@ -75,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             myDiv5.style.display = "none";
             myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
             myDiv6.style.display = "none";
+            myDiv8.style.top =  "850px";
         }
     }
 
@@ -135,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for resize events to reposition on window size change
     window.addEventListener("resize", repositionDiv);
 
-    const lenis = new Lenis({lerp: 0.075, duration: 1.2, easing: (t) =>Math.min(1,1.001 - Math.pow(2,-10*t)) });
+    const lenis = new Lenis({lerp: 0.1, duration: 1.2, easing: (t) =>Math.min(1,1.001 - Math.pow(2,-10*t)) });
 
     // lenis.on('scroll', (e) => {
     //     console.log(e)
