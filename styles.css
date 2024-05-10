@@ -772,7 +772,5 @@ p{
 }
 
 .tasmay {
-    background-size: contain;
-    background-repeat: no-repeat;
     background-image: url(tasmay.JPG);
 }
