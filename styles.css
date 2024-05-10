@@ -53,6 +53,20 @@ p{
     top: 0;
 }
 
+.navbar-ab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: rgba(19, 39, 37, 0.5);
+    width: 100%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
 .akoume {
     height: 65px;
     width: 110px;
@@ -123,14 +137,14 @@ p{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     width: 100%;
     min-height: 100%;
     overflow-y: auto;
 }
 
 .dropdown-content > ul {
-    margin-top: 120px;
+    margin-top: 150px;
     font-size: 40px;
     margin-left: 20px;
 }
@@ -217,9 +231,10 @@ p{
     z-index: 2;
 
     left: 0;
-    top: 850px;
+    top: 815px;
     
     width: 90%;
+    padding-top: 35px;
     padding-right: 5%;
     padding-left: 5%;
 
@@ -663,4 +678,101 @@ p{
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 15px;
+}
+
+.about-img {
+    margin-bottom: 0;
+}
+
+.about-us{
+    position: absolute;
+    top: 90px;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: white;
+}
+
+.about-title{
+    font-size: 85px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.about-title-desc{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.about-text{
+    font-size: x-large;
+    margin-top: 60px;
+    line-height: 1.6;
+}
+
+.founders-div {
+    width: 80%;
+    position: absolute;
+    top: 1700px;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 80px;
+    background-color: rgba(189, 92, 172,0.5);
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+}
+
+.founders {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 20px;
+
+    justify-content: center;
+    color: white;
+}
+
+.founder-img {
+    
+    height: 450px;
+    width: 350px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.founders-text {
+    padding-left: 5px;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.founders-sub {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.founders-link {
+    margin-top: 0;
+    padding-left: 5px;
+}
+
+.bharat {
+    background-image: url(bharat.jpeg);
+}
+
+.siddharth {
+    background-image: url(siddharth.jpg);
+}
+
+.tasmay {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(tasmay.JPG);
 }

@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
             myDiv4.style.display = "none";
             myDiv5.style.display = "block";
             const toppos = myDiv3.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
-            myDiv8.style.top = (toppos + 200.0) + "px";
-            console.log((toppos + 200.0) + "px");
+            myDiv8.style.top = (toppos + 165.0) + "px";
+            // console.log((toppos + 165.0) + "px");
         }
 
         else {
@@ -81,6 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
             myDiv6.style.display = "none";
             myDiv8.style.top =  "850px";
         }
+
+        if (window.innerHeight < 550) {
+            myDiv7.style.marginTop = "75px";
+        }
+    
+        else {
+            myDiv7.style.marginTop = "120px";
+        }
     }
 
     function drop() {
@@ -92,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
         else {
             myDiv5.style.backgroundImage = "url('cross.svg')";
             myDiv6.style.display = "block";
-            navbar.style.backgroundColor = "rgba(219, 239, 237, 1)";
         }
     }
 
