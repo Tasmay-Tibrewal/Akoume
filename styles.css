@@ -1,9 +1,29 @@
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    display: none;
+}
+
 html, body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     z-index: 0;
     overflow-x: hidden; 
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     scroll-behavior: smooth;
     /* box-sizing: border-box; */
     /* overflow-y: visible;  */
