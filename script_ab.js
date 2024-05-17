@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const myDiv10 = document.getElementById("bottom-txt");
     const myDiv11 = document.getElementById("team");
     const myDiv12 = document.getElementById("team-title");
+    const myDiv13 = document.getElementsByClassName("founder-img");
+    const myDiv14 = document.getElementById("back-filter");
 
     const Home = document.getElementById("Home");
     const About = document.getElementById("About");
@@ -17,6 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const Resources = document.getElementById("Resources");
     const Contribute = document.getElementById("Contribute");
     const Contact = document.getElementById("Contact");
+
+    var body = document.body,
+    html = document.documentElement;
+
+    var height_el = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+    myDiv14.style.height = height_el + 'px';
 
     //For windows smaller than 550 px
     if (window.innerHeight < 550) {
@@ -29,6 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function repositionDiv() {
         const toppos = myDiv10.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
+
+        var body = document.body,
+        html = document.documentElement;
+
+        var height_el = Math.max( body.scrollHeight, body.offsetHeight, 
+                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+        myDiv14.style.height = height_el + 'px';
 
         if (window.innerWidth < 977) {
             myDiv12.style.textAlign = "center";
@@ -52,23 +68,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (window.innerWidth > 800) {
-            myDiv11.style.top = (toppos + 270.0) + "px";
-            // console.log((toppos + 270.0) + "px");
+            myDiv11.style.top = (toppos + 360.0) + "px";
+            // console.log((toppos + 360.0) + "px");
+            for (var i = 0; i < myDiv13.length; i++)
+            {
+                myDiv13[i].style.width = "350px";
+                myDiv13[i].style.height = "450px";
+            }
         }
 
         else if (window.innerWidth > 600) {
-            myDiv11.style.top = (toppos + 370.0) + "px";
-            // console.log((toppos + 370.0) + "px");
+            myDiv11.style.top = (toppos + 470.0) + "px";
+            // console.log((toppos + 470.0) + "px");
+            for (var i = 0; i < myDiv13.length; i++)
+            {
+                myDiv13[i].style.width = "350px";
+                myDiv13[i].style.height = "450px";
+            }
         }
         
         else if (window.innerWidth > 400) {
-            myDiv11.style.top = (toppos + 470.0) + "px";
-            // console.log((toppos + 470.0) + "px");
+            myDiv11.style.top = (toppos + 650.0) + "px";
+            // console.log((toppos + 650.0) + "px");
+            for (var i = 0; i < myDiv13.length; i++)
+            {
+                myDiv13[i].style.width = "270px";
+                myDiv13[i].style.height = "350px";
+            }
         }
 
         else {
-            myDiv11.style.top = (toppos + 570.0) + "px";
-            // console.log((toppos + 570.0) + "px");
+            myDiv11.style.top = (toppos + 740.0) + "px";
+            // console.log((toppos + 740.0) + "px");
+            for (var i = 0; i < myDiv13.length; i++)
+            {
+                myDiv13[i].style.width = "270px";
+                myDiv13[i].style.height = "350px";
+            }
         }
 
         if (window.innerHeight < 550) {

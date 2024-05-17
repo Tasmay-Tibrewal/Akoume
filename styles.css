@@ -50,6 +50,13 @@ body {
 
 }
 
+.bg-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 p{
     font-size: 20px;
 }
@@ -727,6 +734,7 @@ p{
 .about-text{
     font-size: x-large;
     margin-top: 60px;
+    font-weight: 500;
     line-height: 1.6;
 }
 
@@ -753,6 +761,13 @@ p{
     color: white;
 }
 
+.founders-section {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    color: white;
+}
+
 .founder-img {
     
     height: 450px;
@@ -769,6 +784,7 @@ p{
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .founders-sub {

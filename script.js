@@ -95,11 +95,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (myDiv5.style.backgroundImage == 'url("cross.svg")') {
             myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
             myDiv6.style.display = "none";
+            myDiv.style.filter = "blur(0px)";
+            myDiv2.style.filter = "blur(0px)";
+            myDiv8.style.filter = "blur(0px)";
             handleScroll();
         }
         else {
             myDiv5.style.backgroundImage = "url('cross.svg')";
             myDiv6.style.display = "block";
+            myDiv.style.filter = "blur(5px)";
+            myDiv2.style.filter = "blur(5px)";
+            myDiv8.style.filter = "blur(5px)";
         }
     }
 
