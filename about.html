@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Us page, Includes sections on: Our Mission, Our Story, Today and beyond and Our Team.">
     <title>Akoume</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script_ab.js"></script> 
@@ -15,35 +16,33 @@
 
 <body style="background-image: url(about.png); background-size: cover;">
     <section style="background-color: rgba(0,0,0,0.2);" class="bg-filter" id="back-filter"></section>
-    <div class = "cover">
-        <div class="navbar-ab" id = "bg-opacity">
+    <section class = "cover">
+        <section class="navbar-ab" id = "bg-opacity">
             <div class="akoume" style="background-image: url(akoume\ logo3.png);"></div>
             <div class="title"></div>
     
             <div class = "links" id="links">
                 <a href="https://akoume.me/" style="padding-left: 0px; color: white;">Home</a>
                 <a href="https://akoume.me/about" style="color: white;">About</a>
-                <a href="/index#work-text" style="color: white;">Our Work</a>
-                <a href="/contribute" style="color: white;">Contribute</a>
-                <a href="/resources" style="color: white;">Resources</a>
-                <a href="/contact" style="padding-right: 45px; color: white;">Contact</a>
+                <!-- <a href="/contribute" style="color: white;">Contribute</a> -->
+                <a href="https://akoume.me/#work-text" style="color: white;">Resources</a>
+                <a href="https://akoume.me/#contact-title" style="padding-right: 45px; color: white;">Contact</a>
             </div>
 
             <div class="dropdown">
-                <a class="dropbtn" id="dropbtn" href="#" style="filter: invert(1);"></a>
+                <a aria-label="Dropdown button" class="dropbtn" id="dropbtn" href="#" style="filter: invert(1);"></a>
                 <div class="dropdown-content" id="dropdown-content" style="background-color: rgb(19, 39, 37, 0.5);">
                         <ul id="dropdown-list" style="color: white;">
                             <li><a href="https://akoume.me/" id="Home" style="color: white;">Home</a></li>
                             <li><a href="https://akoume.me/about" id="About" style="color: white;">About</a></li>
-                            <li><a href="/index#work-text" id="Our Work" style="color: white;">Our Work</a></li>
-                            <li><a href="/resources" id="Resources" style="color: white;">Resources</a></li>
-                            <li><a href="/contribute" id="Contribute" style="color: white;">Contribute</a></li>
-                            <li><a href="/contact" id="Contact" style="color: white;">Contact</a></li>
+                            <li><a href="https://akoume.me/#work-text" id="Resources" style="color: white;">Resources</a></li>
+                            <!-- <li><a href="/contribute" id="Contribute" style="color: white;">Contribute</a></li> -->
+                            <li><a href="https://akoume.me/#contact-title" id="Contact" style="color: white;">Contact</a></li>
                         </ul>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </section>
 
     <section id="blurr">
         <section id="about" class="about-us">
@@ -60,7 +59,7 @@
 
             <p style="font-size: 30px; font-weight: 700; margin-top: 70px; margin-bottom: 20px;">Our Story:</p>
             <p style="margin-top: 0; margin-bottom: 0;" class="about-text">
-                Founded by three college students with a shared passion for mental health, Akoume emerged from a recognition of the stigma surrounding mental health issues. With a blend of enthusiasm and determination, we embarked on a journey to address the challenges faced by our peers grappling with stress, anxiety, and feelings of isolation. In 2024, Akoume was launched with a clear vision: to establish a nurturing space for mental health support.                We all did share a passion for mental health. We'd also noticed how many of our friends, batchmates, and even ourselves were struggling with things like stress, anxiety, and feeling disconnected. That's when it hit us: why not use our time and energy to actually make a difference?
+                Founded by three college students with a shared passion for mental health, Akoume emerged from a recognition of the stigma surrounding mental health issues. With a blend of enthusiasm and determination, we embarked on a journey to address the challenges faced by our peers grappling with stress, anxiety, and feelings of isolation.<br><br> In 2024, Akoume was launched with a clear vision: to establish a nurturing space for mental health support.                We all did share a passion for mental health. We'd also noticed how many of our friends, batchmates, and even ourselves were struggling with things like stress, anxiety, and feeling disconnected. That's when it hit us: why not use our time and energy to actually make a difference?
             </p>
 
             <p style="font-size: 30px; font-weight: 700; margin-top: 70px; margin-bottom: 20px;">Today and Beyond:</p>
@@ -70,31 +69,31 @@
 
         </section>
 
-        <div class="founders-div" id="team">
+        <section class="founders-div" id="team">
             <p id = "team-title" style="font-size: 65px; font-weight: 700; margin-bottom: 70px; color: white;">Our Team</p>
             <div class= "founders">
                 <div class="founders-section">
                     <div class="founder-img bharat"></div> 
                     <p class="founders-text">Bharat Uday<br></p>
                     <p class="founders-sub">Co-Founder</p> 
-                    <a href="https://www.linkedin.com/in/bharat-uday-a05018196/" target="_blank" class="founders-link"><img src="linkedin.png" style="height: 35px; width: 35px;"></a>
+                    <a aria-label="founders image bharat" href="https://www.linkedin.com/in/bharat-uday-a05018196/" target="_blank" class="founders-link"><img alt="founders-image-bharat" src="linkedin.png" style="height: 35px; width: 35px;"></a>
                 </div>
 
                 <div class="founders-section">
                     <div class="founder-img siddharth"></div>
                     <p class="founders-text">Siddharth Dikshit<br></p>
                     <p class="founders-sub">Co-Founder</p>
-                    <a href="https://www.linkedin.com/in/siddharth-dikshit-351585227/" target="_blank" class="founders-link"><img src="linkedin.png" style="height: 35px; width: 35px;"></a>
+                    <a aria-label="founders image siddharth" href="https://www.linkedin.com/in/siddharth-dikshit-351585227/" target="_blank" class="founders-link"><img alt="founders-image-siddharth" src="linkedin.png" style="height: 35px; width: 35px;"></a>
                 </div>
                 
                 <div class="founders-section">
                     <div class="founder-img tasmay"></div>
                     <p class="founders-text">Tasmay Tibrewal<br></p>
                     <p class="founders-sub">Co-Founder</p>
-                    <a href="https://www.linkedin.com/in/tasmay-tibrewal/" target="_blank" class="founders-link"><img src="linkedin.png" style="height: 35px; width: 35px;"></a>
+                    <a aria-label="founders image tasmay" href="https://www.linkedin.com/in/tasmay-tibrewal/" target="_blank" class="founders-link"><img alt="founders-image-tasmay" src="linkedin.png" style="height: 35px; width: 35px;"></a>
                 </div>
                 
             </div>
-        </div>
+        </section>
     </section>
 </body>

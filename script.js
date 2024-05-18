@@ -10,12 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const myDiv6 = document.getElementById("dropdown-content");
     const myDiv7 = document.getElementById("dropdown-list");
     const myDiv8 = document.getElementById("work-text");
+    const myDiv15 = document.getElementById("tick");
+    const myDiv16 = document.getElementById("copy-mail-svg");
+    const myDiv17 = document.getElementById("copy-phone-svg");
+    const myDiv18 = document.getElementById("tick2");
+    const myDiv19 = document.getElementById("contact-us");
+    const myDiv20 = document.getElementById("steps");
 
     const Home = document.getElementById("Home");
     const About = document.getElementById("About");
-    const OurWork = document.getElementById("Our Work");
     const Resources = document.getElementById("Resources");
-    const Contribute = document.getElementById("Contribute");
+    // const Contribute = document.getElementById("Contribute");
     const Contact = document.getElementById("Contact");
 
     const pageHeight = document.documentElement.scrollHeight;
@@ -49,6 +54,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function repositionDiv() {
+
+        const botpos = myDiv20.getBoundingClientRect().bottom + window.scrollY || window.pageYOffset;
+        myDiv19.style.top = (botpos + 148.0) + "px";
+        // console.log((botpos + 148.0) + "px");
+
         if (window.innerWidth < 945) {
             myDiv.style.top = "60px";  // Move below the viewport
             myDiv.style.width = "100%";
@@ -109,6 +119,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    async function copyToClipboard(text) {
+        try {
+          await navigator.clipboard.writeText(text);
+          console.log('Text copied to clipboard');
+        } catch (err) {
+          console.error('Failed to copy text: ', err);
+        }
+    }
+
+    function mailclick() {
+        myDiv16.style.visibility = "visible";
+        myDiv15.style.visibility = "visible";
+        
+        copyToClipboard("care.akoume@gmail.com")
+
+        setTimeout(() => {
+            myDiv15.style.visibility = "hidden"; 
+            myDiv16.style.removeProperty("visibility"); 
+          }, 2000);
+    }
+
+    function phoneclick() {
+        myDiv17.style.visibility = "visible";
+        myDiv18.style.visibility = "visible";
+        
+        copyToClipboard("+91 964 745 3255")
+
+        setTimeout(() => {
+            myDiv18.style.visibility = "hidden"; 
+            myDiv17.style.removeProperty("visibility");
+          }, 2000);
+    }
+
     myDiv5.addEventListener("click", function(event) {
         drop();
         event.preventDefault();  // Prevent default behavior
@@ -124,24 +167,29 @@ document.addEventListener('DOMContentLoaded', function() {
         myDiv6.style.display = "none";
     });
 
-    OurWork.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
-    });
-
     Resources.addEventListener("click", function(event) {
         myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
         myDiv6.style.display = "none";
     });
 
-    Contribute.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
-    });
+    // Contribute.addEventListener("click", function(event) {
+    //     myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
+    //     myDiv6.style.display = "none";
+    // });
 
     Contact.addEventListener("click", function(event) {
         myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
         myDiv6.style.display = "none";
+    });
+
+    myDiv16.addEventListener("click", function(event) {
+        mailclick();
+        event.preventDefault();  // Prevent default behavior
+    });
+
+    myDiv17.addEventListener("click", function(event) {
+        phoneclick();
+        event.preventDefault();  // Prevent default behavior
     });
 
     // Event listener for scrolling 

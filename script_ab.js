@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const Home = document.getElementById("Home");
     const About = document.getElementById("About");
-    const OurWork = document.getElementById("Our Work");
     const Resources = document.getElementById("Resources");
-    const Contribute = document.getElementById("Contribute");
+    // const Contribute = document.getElementById("Contribute");
     const Contact = document.getElementById("Contact");
 
     var body = document.body,
@@ -146,20 +145,15 @@ document.addEventListener('DOMContentLoaded', function() {
         myDiv6.style.display = "none";
     });
 
-    OurWork.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
-    });
-
     Resources.addEventListener("click", function(event) {
         myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
         myDiv6.style.display = "none";
     });
 
-    Contribute.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
-    });
+    // Contribute.addEventListener("click", function(event) {
+    //     myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
+    //     myDiv6.style.display = "none";
+    // });
 
     Contact.addEventListener("click", function(event) {
         myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
