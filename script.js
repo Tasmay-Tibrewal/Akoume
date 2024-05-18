@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const Contact = document.getElementById("Contact");
 
     const pageHeight = document.documentElement.scrollHeight;
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     //For windows smaller than 550 px
     if (window.innerHeight < 550) {
@@ -54,10 +55,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function repositionDiv() {
-
-        const botpos = myDiv20.getBoundingClientRect().bottom + window.scrollY || window.pageYOffset;
-        myDiv19.style.top = (botpos + 148.0) + "px";
-        // console.log((botpos + 148.0) + "px");
+        if (isMobile && window.innerWidth < 1000) {
+            const botpos = myDiv20.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
+            if (window.innerWidth < 350){
+                myDiv19.style.top = (botpos + 920.0) + "px";
+                // console.log((botpos + 920.0) + "px");
+            }
+            else {
+                myDiv19.style.top = (botpos + 740.0) + "px";
+                // console.log((botpos + 740.0) + "px");
+            }
+        } 
+          
+        else {
+            const botpos = myDiv20.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
+            myDiv19.style.top = (botpos + 470.0) + "px";
+            // console.log((botpos + 470.0) + "px");
+        }
 
         if (window.innerWidth < 945) {
             myDiv.style.top = "60px";  // Move below the viewport
@@ -201,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for resize events to reposition on window size change
     window.addEventListener("resize", repositionDiv);
 
-    const lenis = new Lenis({lerp: 0.1, duration: 1.2, easing: (t) =>Math.min(1,1.001 - Math.pow(2,-10*t)) });
+    const lenis = new Lenis({lerp: 0.11, duration: 1.2, easing: (t) =>Math.min(1,1.001 - Math.pow(2,-10*t)) });
 
     // lenis.on('scroll', (e) => {
     //     console.log(e)

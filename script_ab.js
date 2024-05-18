@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for resize events to reposition on window size change
     window.addEventListener("resize", repositionDiv);
 
-    const lenis = new Lenis({lerp: 0.1, duration: 1.2, easing: (t) =>Math.min(1,1.001 - Math.pow(2,-10*t)) });
+    const lenis = new Lenis({lerp: 0.11, duration: 1.2, easing: (t) =>Math.min(1,1.001 - Math.pow(2,-10*t)) });
 
     // lenis.on('scroll', (e) => {
     //     console.log(e)
