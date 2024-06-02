@@ -2,37 +2,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Get the element
     const navbar = document.getElementById("bg-opacity");
-    const myDiv = document.getElementById("bg-img");
-    const myDiv2 = document.getElementById("cover-text");
-    const myDiv3 = document.getElementById("cover-button");
-    const myDiv4 = document.getElementById("links");
-    const myDiv5 = document.getElementById("dropbtn");
-    const myDiv6 = document.getElementById("dropdown-content");
-    const myDiv7 = document.getElementById("dropdown-list");
-    const myDiv8 = document.getElementById("work-text");
-    const myDiv15 = document.getElementById("tick");
-    const myDiv16 = document.getElementById("copy-mail-svg");
-    const myDiv17 = document.getElementById("copy-phone-svg");
-    const myDiv18 = document.getElementById("tick2");
-    const myDiv19 = document.getElementById("contact-us");
-    const myDiv20 = document.getElementById("steps");
+    const Div = document.getElementById("bg-img");
+    const Div2 = document.getElementById("cover-text");
+    const Div3 = document.getElementById("cover-button");
+    const Div4 = document.getElementById("links");
+    const Div5 = document.getElementById("dropbtn");
+    const Div6 = document.getElementById("dropdown-content");
+    const Div7 = document.getElementById("dropdown-list");
+    const Div8 = document.getElementById("work-text");
+    const Div15 = document.getElementById("tick");
+    const Div16 = document.getElementById("copy-mail-svg");
+    const Div17 = document.getElementById("copy-phone-svg");
+    const Div18 = document.getElementById("tick2");
+    const Div19 = document.getElementById("contact-us");
+    const Div20 = document.getElementById("serenity");
+    const Div21 = document.getElementById("sanctuary");
+    const Div26 = document.getElementById("groves");
+    const Div27 = document.getElementById("winds");
+    const Div28 = document.getElementById("meadows");
 
     const Home = document.getElementById("Home");
     const About = document.getElementById("About");
     const Resources = document.getElementById("Resources");
+    const Repository = document.getElementById("Repository");
     // const Contribute = document.getElementById("Contribute");
     const Contact = document.getElementById("Contact");
+    const Volunteer = document.getElementById("Volunteer");
 
     const pageHeight = document.documentElement.scrollHeight;
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     //For windows smaller than 550 px
     if (window.innerHeight < 550) {
-        myDiv7.style.marginTop = "75px";
+        Div7.style.marginTop = "75px";
     }
 
     else {
-        myDiv7.style.marginTop = "120px";
+        Div7.style.marginTop = "120px";
     }
 
     // Function to change opacity
@@ -56,80 +62,82 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function repositionDiv() {
         if (isMobile && window.innerWidth < 1000) {
-            const botpos = myDiv20.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
+            const botpos = Div20.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
             if (window.innerWidth < 350){
-                myDiv19.style.top = (botpos + 920.0) + "px";
+                Div19.style.top = (botpos + 920.0) + "px";
                 // console.log((botpos + 920.0) + "px");
             }
             else {
-                myDiv19.style.top = (botpos + 740.0) + "px";
+                Div19.style.top = (botpos + 740.0) + "px";
                 // console.log((botpos + 740.0) + "px");
             }
         } 
           
         else {
-            const botpos = myDiv20.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
-            myDiv19.style.top = (botpos + 470.0) + "px";
+            const botpos = Div20.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
+            Div19.style.top = (botpos + 470.0) + "px";
             // console.log((botpos + 470.0) + "px");
         }
 
         if (window.innerWidth < 945) {
-            myDiv.style.top = "60px";  // Move below the viewport
-            myDiv.style.width = "100%";
-            myDiv.style.minHeight = "500px";
-            myDiv.style.backgroundPosition = "center center";
-            myDiv2.style.top = "480px";
-            myDiv2.style.width = "94%";
-            myDiv2.style.textAlign = "center";
-            myDiv3.style.alignSelf = "center";
-            myDiv4.style.display = "none";
-            myDiv5.style.display = "block";
-            const toppos = myDiv3.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
-            myDiv8.style.top = (toppos + 165.0) + "px";
+            Div.style.top = "60px";  // Move below the viewport
+            Div.style.width = "100%";
+            Div.style.minHeight = "500px";
+            Div.style.backgroundPosition = "center center";
+            Div2.style.top = "480px";
+            Div2.style.width = "94%";
+            Div2.style.textAlign = "center";
+            Div3.style.alignSelf = "center";
+            Div4.style.display = "none";
+            Div5.style.display = "block";
+            const toppos = Div3.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
+            Div8.style.top = (toppos + 165.0) + "px";
             // console.log((toppos + 165.0) + "px");
         }
 
         else {
             // Reset styles if window size increases again
-            myDiv.style.top = "0";
-            myDiv.style.width = "65%";
-            myDiv.style.minHeight = "820px";
-            myDiv.style.backgroundPosition = "right center";
-            myDiv2.style.top = "43px";
-            myDiv2.style.width = "38%";
-            myDiv2.style.textAlign = "left";
-            myDiv3.style.alignSelf = "flex-start";
-            myDiv4.style.display = "block";
-            myDiv5.style.display = "none";
-            myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-            myDiv6.style.display = "none";
-            myDiv8.style.top =  "850px";
+            Div.style.top = "0";
+            Div.style.width = "65%";
+            Div.style.minHeight = "820px";
+            Div.style.backgroundPosition = "right center";
+            Div2.style.top = "43px";
+            Div2.style.width = "38%";
+            Div2.style.textAlign = "left";
+            Div3.style.alignSelf = "flex-start";
+            Div4.style.display = "block";
+            Div5.style.display = "none";
+            Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+            Div6.style.display = "none";
+            Div8.style.top =  "850px";
         }
 
         if (window.innerHeight < 550) {
-            myDiv7.style.marginTop = "75px";
+            Div7.style.marginTop = "75px";
         }
     
         else {
-            myDiv7.style.marginTop = "120px";
+            Div7.style.marginTop = "120px";
         }
     }
 
     function drop() {
-        if (myDiv5.style.backgroundImage == 'url("cross.svg")') {
-            myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-            myDiv6.style.display = "none";
-            myDiv.style.filter = "blur(0px)";
-            myDiv2.style.filter = "blur(0px)";
-            myDiv8.style.filter = "blur(0px)";
+        if (Div5.style.backgroundImage == 'url("cross.svg")') {
+            Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+            Div6.style.display = "none";
+            Div.style.filter = "blur(0px)";
+            Div2.style.filter = "blur(0px)";
+            Div8.style.filter = "blur(0px)";
+            Div19.style.filter = "blur(0px)";
             handleScroll();
         }
         else {
-            myDiv5.style.backgroundImage = "url('cross.svg')";
-            myDiv6.style.display = "block";
-            myDiv.style.filter = "blur(5px)";
-            myDiv2.style.filter = "blur(5px)";
-            myDiv8.style.filter = "blur(5px)";
+            Div5.style.backgroundImage = "url('cross.svg')";
+            Div6.style.display = "block";
+            Div.style.filter = "blur(5px)";
+            Div2.style.filter = "blur(5px)";
+            Div8.style.filter = "blur(5px)";
+            Div19.style.filter = "blur(5px)";
         }
     }
 
@@ -143,66 +151,101 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function mailclick() {
-        myDiv16.style.visibility = "visible";
-        myDiv15.style.visibility = "visible";
+        Div16.style.visibility = "visible";
+        Div15.style.visibility = "visible";
         
         copyToClipboard("care.akoume@gmail.com")
 
         setTimeout(() => {
-            myDiv15.style.visibility = "hidden"; 
-            myDiv16.style.removeProperty("visibility"); 
+            Div15.style.visibility = "hidden"; 
+            Div16.style.removeProperty("visibility"); 
           }, 2000);
     }
 
     function phoneclick() {
-        myDiv17.style.visibility = "visible";
-        myDiv18.style.visibility = "visible";
+        Div17.style.visibility = "visible";
+        Div18.style.visibility = "visible";
         
         copyToClipboard("+91 964 745 3255")
 
         setTimeout(() => {
-            myDiv18.style.visibility = "hidden"; 
-            myDiv17.style.removeProperty("visibility");
+            Div18.style.visibility = "hidden"; 
+            Div17.style.removeProperty("visibility");
           }, 2000);
     }
 
-    myDiv5.addEventListener("click", function(event) {
+    Div5.addEventListener("click", function(event) {
         drop();
         event.preventDefault();  // Prevent default behavior
     });
 
     Home.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
+        Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+        Div6.style.display = "none";
     });
 
     About.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
+        Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+        Div6.style.display = "none";
     });
 
     Resources.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
+        Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+        Div6.style.display = "none";
+    });
+
+    Repository.addEventListener("click", function(event) {
+        Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+        Div6.style.display = "none";
     });
 
     // Contribute.addEventListener("click", function(event) {
-    //     myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-    //     myDiv6.style.display = "none";
+    //     Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+    //     Div6.style.display = "none";
     // });
 
-    Contact.addEventListener("click", function(event) {
-        myDiv5.style.backgroundImage = "url('Hamburger_icon.svg')";
-        myDiv6.style.display = "none";
+    Volunteer.addEventListener("click", function(event) {
+        Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+        Div6.style.display = "none";
     });
 
-    myDiv16.addEventListener("click", function(event) {
+    Contact.addEventListener("click", function(event) {
+        Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
+        Div6.style.display = "none";
+    });
+
+    Div16.addEventListener("click", function(event) {
         mailclick();
         event.preventDefault();  // Prevent default behavior
     });
 
-    myDiv17.addEventListener("click", function(event) {
+    Div17.addEventListener("click", function(event) {
         phoneclick();
+        event.preventDefault();  // Prevent default behavior
+    });
+
+    Div21.addEventListener("click", function(event) {
+        window.open("https://chat.whatsapp.com/JfQlYsGDxFM1I9syLnRsVP", '_blank').focus();
+        event.preventDefault();  // Prevent default behavior
+    });
+
+    Div26.addEventListener("click", function(event) {
+        window.open("https://akoume.me/repository/#healing-groves", '_self').focus();
+        event.preventDefault();  // Prevent default behavior
+    });
+
+    Div27.addEventListener("click", function(event) {
+        window.open("https://akoume.me/repository/#whispering-winds", '_self').focus();
+        event.preventDefault();  // Prevent default behavior
+    });
+
+    Div28.addEventListener("click", function(event) {
+        window.open("https://akoume.me/repository/#mindful-meadows", '_self').focus();
+        event.preventDefault();  // Prevent default behavior
+    });
+
+    Div20.addEventListener("click", function(event) {
+        window.open("https://akoume.me/repository/#serenity-leaves", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 

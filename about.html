@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Us page, Includes sections on: Our Mission, Our Story, Today and beyond and Our Team.">
-    <title>Akoume</title>
+    <title>Akoume: About</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script_ab.js"></script> 
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
@@ -13,6 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES2SW6WPST"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ES2SW6WPST');
+</script>
 
 <body style="background-image: url(about.png); background-size: cover;">
     <section style="background-color: rgba(0,0,0,0.2);" class="bg-filter" id="back-filter"></section>
@@ -24,8 +34,10 @@
             <div class = "links" id="links">
                 <a href="https://akoume.me/" style="padding-left: 0px; color: white;">Home</a>
                 <a href="https://akoume.me/about" style="color: white;">About</a>
-                <!-- <a href="/contribute" style="color: white;">Contribute</a> -->
                 <a href="https://akoume.me/#work-text" style="color: white;">Resources</a>
+                <a href="https://akoume.me/repository" style="color: white;">Repository</a>
+                <!-- <a href="/contribute" style="color: white;">Contribute</a> -->
+                <a href="https://akoume.me/#contact-us" style="color: white;">Volunteer</a>
                 <a href="https://akoume.me/#contact-us" style="padding-right: 45px; color: white;">Contact</a>
             </div>
 
@@ -36,7 +48,9 @@
                             <li><a href="https://akoume.me/" id="Home" style="color: white;">Home</a></li>
                             <li><a href="https://akoume.me/about" id="About" style="color: white;">About</a></li>
                             <li><a href="https://akoume.me/#work-text" id="Resources" style="color: white;">Resources</a></li>
+                            <li><a href="https://akoume.me/repository" id="Repository" style="color: white;">Repository</a></li>
                             <!-- <li><a href="/contribute" id="Contribute" style="color: white;">Contribute</a></li> -->
+                            <li><a href="https://akoume.me/#contact-us" id="Volunteer" style="color: white;">Volunteer</a></li>
                             <li><a href="https://akoume.me/#contact-us" id="Contact" style="color: white;">Contact</a></li>
                         </ul>
                 </div>

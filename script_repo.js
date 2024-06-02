@@ -6,12 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const Div5 = document.getElementById("dropbtn");
     const Div6 = document.getElementById("dropdown-content");
     const Div7 = document.getElementById("dropdown-list");
-    const Div9 = document.getElementById("about");
-    const Div10 = document.getElementById("bottom-txt");
-    const Div11 = document.getElementById("team");
-    const Div12 = document.getElementById("team-title");
-    const Div13 = document.getElementsByClassName("founder-img");
-    const Div14 = document.getElementById("back-filter");
+    const Div22 = document.getElementById("post-nav");
+    const Div25 = document.getElementsByClassName("blog-img-element");
 
     const Home = document.getElementById("Home");
     const About = document.getElementById("About");
@@ -20,13 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // const Contribute = document.getElementById("Contribute");
     const Contact = document.getElementById("Contact");
     const Volunteer = document.getElementById("Volunteer");
-
-    var body = document.body,
-    html = document.documentElement;
-
-    var height_el = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-    Div14.style.height = height_el + 'px';
 
     //For windows smaller than 550 px
     if (window.innerHeight < 550) {
@@ -38,22 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function repositionDiv() {
-        const toppos = Div10.getBoundingClientRect().top + window.scrollY || window.pageYOffset;
 
-        var body = document.body,
-        html = document.documentElement;
-
-        var height_el = Math.max( body.scrollHeight, body.offsetHeight, 
-                        html.clientHeight, html.scrollHeight, html.offsetHeight );
-        Div14.style.height = height_el + 'px';
-
-        if (window.innerWidth < 977) {
-            Div12.style.textAlign = "center";
-        }
-
-        else{
-            Div12.style.textAlign = "start";
-        }
+        // console.log(window.innerWidth);
 
         if (window.innerWidth < 945) {
             Div4.style.display = "none";
@@ -68,43 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
             Div6.style.display = "none";
         }
 
-        if (window.innerWidth > 800) {
-            Div11.style.top = (toppos + 360.0) + "px";
-            // console.log((toppos + 360.0) + "px");
-            for (var i = 0; i < Div13.length; i++)
-            {
-                Div13[i].style.width = "350px";
-                Div13[i].style.height = "450px";
-            }
-        }
-
-        else if (window.innerWidth > 600) {
-            Div11.style.top = (toppos + 470.0) + "px";
-            // console.log((toppos + 470.0) + "px");
-            for (var i = 0; i < Div13.length; i++)
-            {
-                Div13[i].style.width = "350px";
-                Div13[i].style.height = "450px";
-            }
-        }
-        
-        else if (window.innerWidth > 400) {
-            Div11.style.top = (toppos + 650.0) + "px";
-            // console.log((toppos + 650.0) + "px");
-            for (var i = 0; i < Div13.length; i++)
-            {
-                Div13[i].style.width = "270px";
-                Div13[i].style.height = "350px";
+        if (window.innerWidth < 450) {
+            for (let i = 0; i < Div25.length; i++) {
+                Div25[i].style.width = "350px";
+                Div25[i].style.height = "350px";
             }
         }
 
         else {
-            Div11.style.top = (toppos + 740.0) + "px";
-            // console.log((toppos + 740.0) + "px");
-            for (var i = 0; i < Div13.length; i++)
-            {
-                Div13[i].style.width = "270px";
-                Div13[i].style.height = "350px";
+            // Reset styles if window size increases again
+            for (let i = 0; i < Div25.length; i++) {
+                Div25[i].style.width = "400px";
+                Div25[i].style.height = "400px";
             }
         }
 
@@ -121,14 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (Div5.style.backgroundImage == 'url("cross.svg")') {
             Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
             Div6.style.display = "none";
-            Div9.style.filter = "blur(0px)";
-            Div11.style.filter = "blur(0px)";
+            Div22.style.filter = "blur(0px)";
+            // handleScroll();
         }
         else {
             Div5.style.backgroundImage = "url('cross.svg')";
             Div6.style.display = "block";
-            Div9.style.filter = "blur(5px)";
-            Div11.style.filter = "blur(5px)";
+            Div22.style.filter = "blur(5px)";
         }
     }
 
@@ -171,6 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
         Div5.style.backgroundImage = "url('Hamburger_icon.svg')";
         Div6.style.display = "none";
     });
+
+    // // Event listener for scrolling 
+    // window.addEventListener('scroll', handleScroll); 
 
     // Call the function initially to check the window size
     repositionDiv();

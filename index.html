@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <script type="text/javascript">var submitted=false</script>
     <iframe name="hide" id="hide" style="display: none;" onload="if(submitted){window.alert('Form submitted sucessfully');
     const inputElements = document.getElementsByClassName('inputbox'); // Get the input element
@@ -19,6 +20,16 @@
     {inputElements[i].value = '';}
     }"></iframe>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES2SW6WPST"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ES2SW6WPST');
+</script>
 
 <body>
     <section class = "cover">
@@ -29,8 +40,10 @@
             <div class = "links" id="links">
                 <a href="https://akoume.me/" style="padding-left: 0px;">Home</a>
                 <a href="https://akoume.me/about">About</a>
-                <!-- <a href="/contribute">Contribute</a> -->
                 <a href="https://akoume.me/#work-text">Resources</a>
+                <a href="https://akoume.me/repository">Repository</a>
+                <!-- <a href="/contribute">Contribute</a> -->
+                <a href="https://akoume.me/#contact-us">Volunteer</a>
                 <a href="https://akoume.me/#contact-us" style="padding-right: 45px;">Contact</a>
             </div>
 
@@ -41,7 +54,9 @@
                         <li><a href="https://akoume.me/" id="Home">Home</a></li>
                         <li><a href="https://akoume.me/about" id="About">About</a></li>
                         <li><a href="https://akoume.me/#work-text" id="Resources">Resources</a></li>
+                        <li><a href="https://akoume.me/repository" id="Repository">Repository</a></li>
                         <!-- <li><a href="/contribute" id="Contribute">Contribute</a></li> -->
+                        <li><a href="https://akoume.me/#contact-us" id="Volunteer">Volunteer</a></li>
                         <li><a href="https://akoume.me/#contact-us" id="Contact">Contact</a></li>
                     </ul>
                 </div>
@@ -62,72 +77,61 @@
 
     <section class="work" id = "work-text">
         <p class="work-desc-title">Resources</p>
-        <p class="work-desc-desc">We offer a variety of services to help you with your mental health needs. Our services include:</p>
+        <p class="work-desc-desc">We offer a variety of services to help you with your mental health needs. <br>Our services include (Tap the icon to open) :</p>
         
         <section class="work-desc">
-            <section id="pathways">
-                <div class="pathways">
+            <section id="sanctuary" style="cursor: pointer;">
+                <div class="sanctuary">
                 </div>
-                <div class="pathways-text">
-                    <p>Pathway</p>
+                <div class="sanctuary-text">
+                    <p>Sanctuary <br>Circle</p>
                 </div>
-                <div class="pathways-desc">
-                    <p><strong>Akoume Community</strong><br><br>Explore the moments that shape your mental health.<br><br>Join us as we navigate mental wellness together.</p>
-                </div>
-            </section>
-
-            <section id="echoes">
-                <div class="echoes">
-                </div>
-                <div class="echoes-text">
-                    <p>Echo</p>
-                </div>
-                <div class="echoes-desc">
-                    <p><strong>Expert Conversations</strong><br><br>Relive, reflect, resonate.<br><br>Your space for reflection, and shared journeys in mental wellness.</p>
+                <div class="sanctuary-desc">
+                    <p><a style="text-decoration: none; color: white;" href = "https://chat.whatsapp.com/JfQlYsGDxFM1I9syLnRsVP" target="_blank"><br><strong><u>Akoume Community</u></strong><br><br>A WhatsApp group for &nbsp our community with weekly or bi-weekly virtual meetups.</a></p>
                 </div>
             </section>
 
-            <section id="heartlines">
-                <div class="heartlines">
+            <section id="groves" style="cursor: pointer;">
+                <div class="groves">
                 </div>
-                <div class="heartlines-text">
-                    <p>Heartline</p>
+                <div class="groves-text">
+                    <p>Healing <br>Grove</p>
                 </div>
-                <div class="heartlines-desc">
-                    <p><strong>Letters Home-Delivered</strong><br><br>Unfolding the language of the soul.<br><br>Experience transformed into echoes of mind.</p>
-                </div>
-            </section>
-            
-            <section id="whispers">
-                <div class="whispers">
-                </div>
-                <div class="whispers-text">
-                    <p>Whisper</p>
-                </div>
-                <div class="whispers-desc">
-                    <p><strong>Crafted Emails</strong><br><br>Moments of reflections.<br><br>Daily insights, seeds of support for your mental well-being.</p>
+                <div class="groves-desc">
+                    <p><a style="text-decoration: none; color: white;" href = "https://akoume.me/repository/#healing-groves" target = "_self"><br><strong><u>Professionals' List</u></strong><br><br>A contact list of psychologists and mental health professionals for consultations.</a></p>
                 </div>
             </section>
 
-            <section id="ripples">
-                <div class="ripples">
+            <section id="winds" style="cursor: pointer;">
+                <div class="winds">
                 </div>
-                <div class="ripples-text">
-                    <p>Ripple</p>
+                <div class="winds-text">
+                    <p>Whispering <br>winds</p>
                 </div>
-                <div class="ripples-desc">
-                    <p><strong>Healing Stories</strong><br><br>Echoes of the mind, ripples of change.<br><br>Fragments of wisdom, carried on currents of thought.</p>
+                <div class="winds-desc">
+                    <p><a style="text-decoration: none; color: white;" href = "https://akoume.me/repository/#whispering-winds" target = "_self"><br><strong><u>Expert Conversations</u></strong><br><br>Short podcast-style snippets of our conversations with mental health professionals.</a></p>
                 </div>
             </section>
 
-            <section id="steps">
-                <div class="steps">
+            <section id="meadows" style="cursor: pointer;">
+                <div class="meadows">
                 </div>
-                <div class="steps-text">
-                    <p>Step</p>
+                <div class="meadows-text">
+                    <p>Mindful <br>Meadows</p>
                 </div>
-                <div class="steps-desc">
-                    <p><strong>Social Outreach</strong><br><br>Each step, a <br>footprint in our journey.<br><br>Join our social journey, your step towards a supportive community.</p>
+                <div class="meadows-desc">
+                    <p><a style="text-decoration: none; color: white;" href = "https://akoume.me/repository/#mindful-meadows" target = "_self"><br><strong><u>Healing Stories</u></strong><br><br>Blogs and articles that discuss different aspects of mental health.</a></p>
+                </div>
+            </section>
+
+            <section id="serenity" style="cursor: pointer;">
+                <div class="serenity">
+                </div>
+                <div class="serenity-text">
+                    <p>Serenity <br>Leaves</p>
+                </div>
+                <div class="serenity-desc">
+                    <p><a style="text-decoration: none; color: white;" href = "https://akoume.me/repository/#serenity-leaves" target = "_self"><br><strong><u>Weekly Newsletter</u></strong><br><br>A weekly newsletter with helpful articles and tips about mental health.</a></p>
                 </div>
             </section>
             
@@ -139,7 +143,8 @@
             <div class="contact-info">
                 <p class="contact-title">Contact Us</p>
                 <p class="contact-desc">At Akoume, we understand the challenges inherent in the pursuit of mental well-being. Derived from the Greek word meaning "we listen," Akoume embodies our commitment to providing a safe and empathetic space where individuals are heard, understood, and supported.<br><br>
-                <strong>If you have any questions or would like to connect, please contact us at:</strong></p>
+                <strong>Volunteer for a cause, drop us an email to join us in the journey.<br><br></strong>
+                If you have any questions or would like to connect, please contact us at:</p>
                 <p class="contact-text mail"><strong>Mail:</strong> &nbsp <a class="mail-link" href="mailto:care.akoume@gmail.com" target="_blank">care.akoume@gmail.com</a>
                 
                 <svg id="copy-mail-svg" class="copy-text" id="copy-logo" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="22px" width="1em" xmlns="http://www.w3.org/2000/svg">
