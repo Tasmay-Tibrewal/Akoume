@@ -1311,12 +1311,32 @@ hr {
     background-image: url(mridhula-maha.jpg);
 }
 
+.pragya-gopinath {
+    background-image: url(pragya-gopinath.jpg);
+}
+
 .yukti-rastogi {
     background-image: url(yukti-rastogi.jpg);
 }
 
 .vidhi-sharma {
     background-image: url(vidhi-sharma.jpg);
+}
+
+.harshita-jain {
+    background-image: url(harshita-jain.jpg);
+}
+
+.zeba-hussain {
+    background-image: url(zeba-hussain.jpg);
+}
+
+.ankit-satija {
+    background-image: url(ankit-satija2.jpg);
+}
+
+.lakshmi-jain {
+    background-image: url(lakshmi-jain.jpg);
 }
 
 .blog-sec {
@@ -1385,6 +1405,16 @@ hr {
 
 .blog-img3 {
     background-image: url('blog3_img.jpg'); 
+    height: 400px; 
+    width: 98%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.blog-img4 {
+    background-image: url('blog4_img.webp'); 
     height: 400px; 
     width: 98%; 
     background-size: cover; 
