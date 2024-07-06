@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     Div29.addEventListener("click", function(event) {
-        window.open("https://akoume.me/repository/#calm-waters", '_self').focus();
+        window.open("https://akoume.me/repository#calm-waters", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 
