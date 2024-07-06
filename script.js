@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const Div26 = document.getElementById("groves");
     const Div27 = document.getElementById("winds");
     const Div28 = document.getElementById("meadows");
+    const Div29 = document.getElementById("calm-waters");
 
     const Home = document.getElementById("Home");
     const About = document.getElementById("About");
@@ -241,6 +242,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Div28.addEventListener("click", function(event) {
         window.open("https://akoume.me/repository#mindful-meadows", '_self').focus();
+        event.preventDefault();  // Prevent default behavior
+    });
+
+    Div29.addEventListener("click", function(event) {
+        window.open("https://akoume.me/repository/#calm-waters", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 

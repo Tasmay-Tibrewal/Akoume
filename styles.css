@@ -528,6 +528,74 @@ hr {
     border-radius: 15px;
 }
 
+.calm-waters {
+    background-image: url("calm_waters.png");
+    filter: blur(1.2px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.calm-waters-text{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 15;
+    transform: translate(0px,-300px);
+}
+
+.calm-waters-text:hover > *{
+    transform: translateY(calc(-50% + 50px));
+    transition: all 0.15s ease-in-out;
+}
+
+.calm-waters-text > *{
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: translateY(calc(-50% + 150px));
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 15px;
+}
+
+.calm-waters-desc {
+    height: 300px;
+    width: 300px;
+    z-index: 14;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.13);
+    transform: translate(0px,-300px);
+}
+
+.calm-waters-text:hover + .calm-waters-desc{
+    visibility: visible;
+    transition: all 0.15s ease-in-out;
+}
+
+.calm-waters-desc > * {
+    margin: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(calc(-50% + 175px));
+
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+
 .meadows {
     background-image: url("ripples.jpg");
     filter: blur(1.2px);
@@ -1025,6 +1093,48 @@ hr {
     margin-bottom: 50px;
 }
 
+.Calm-waters-rep {
+    margin-top: 160px;
+    margin-bottom: 150px;
+
+    width: 94%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.Calm-waters-rep-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.Calm-waters-rep-title-desc {
+    margin-bottom: 50px;
+}
+
+.helpline-table {
+    font-size: 20px;
+    border-spacing: 0 0px;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #000;
+    margin: 0;
+    padding: 15px;
+}
+
+th {
+    font-size: 25px;
+}
+
+.helpline-table > * > td {
+    padding: 10px !important;
+}
+
 .blog-thumbnails {
     display: flex;
     flex-wrap: wrap;
@@ -1303,6 +1413,10 @@ hr {
     background-image: url(purva-dixit.jpg);
 }
 
+.ena-gupta {
+    background-image: url(ena-gupta.jpg);
+}
+
 .masiha-shabeer {
     background-image: url(masiha-shabeer.jpg);
 }
@@ -1415,6 +1529,46 @@ hr {
 
 .blog-img4 {
     background-image: url('blog4_img.webp'); 
+    height: 400px; 
+    width: 98%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.blog-img5 {
+    background-image: url('blog5_img.png'); 
+    height: 400px; 
+    width: 98%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.blog-img6 {
+    background-image: url('blog6_img.png'); 
+    height: 400px; 
+    width: 98%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.blog-img7 {
+    background-image: url('blog7_img.png'); 
+    height: 400px; 
+    width: 98%; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.blog-img8 {
+    background-image: url('blog8_img.png'); 
     height: 400px; 
     width: 98%; 
     background-size: cover; 
