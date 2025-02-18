@@ -953,7 +953,8 @@ hr {
 .founders-div {
     width: 80%;
     position: absolute;
-    top: 1700px;
+    bottom: 0px;
+    height: max-content;
     padding-top: 10px;
     padding-left: 10%;
     padding-right: 10%;
@@ -967,7 +968,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     column-gap: 70px;
-    row-gap: 20px;
+    row-gap: 50px;
 
     justify-content: center;
     color: white;
@@ -1020,6 +1021,10 @@ hr {
 
 .tasmay {
     background-image: url(tasmay.JPG);
+}
+
+.sudhanshu {
+    background-image: url(sudhanshu.jpeg);
 }
 
 .cover-repo {
