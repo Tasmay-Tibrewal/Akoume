@@ -231,27 +231,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     Div26.addEventListener("click", function(event) {
-        window.open("https://akoume.me/repository#healing-groves", '_self').focus();
+        window.open("https://akoume.in/repository#healing-groves", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 
     Div27.addEventListener("click", function(event) {
-        window.open("https://akoume.me/repository#whispering-winds", '_self').focus();
+        window.open("https://akoume.in/repository#whispering-winds", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 
     Div28.addEventListener("click", function(event) {
-        window.open("https://akoume.me/repository#mindful-meadows", '_self').focus();
+        window.open("https://akoume.in/repository#mindful-meadows", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 
     Div29.addEventListener("click", function(event) {
-        window.open("https://akoume.me/repository#calm-waters", '_self').focus();
+        window.open("https://akoume.in/repository#calm-waters", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 
     Div20.addEventListener("click", function(event) {
-        window.open("https://akoume.me/repository#serenity-leaves", '_self').focus();
+        window.open("https://akoume.in/repository#serenity-leaves", '_self').focus();
         event.preventDefault();  // Prevent default behavior
     });
 
