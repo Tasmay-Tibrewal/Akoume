@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Page not found â€” Akoume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="assets/img/akoume logo4.png" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <style>
+    .wrap { min-height: 100vh; display: grid; place-items: center; padding: 32px; }
+    .box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 32px; max-width: 720px; width: 100%; text-align: center; }
+  </style>
+  <script>
+    (function() {
+      try {
+        var path = window.location.pathname;
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+
+        // Redirect extension-less blog URLs to .html version
+        // e.g. /blogs/the_silent_epidemic -> /blogs/the_silent_epidemic.html
+        var blogNoExt = /^\/blogs\/[^\/\.]+$/;
+        if (blogNoExt.test(path)) {
+          window.location.replace(path + '.html' + search + hash);
+          return;
+        }
+
+        // Normalize known sectionless directories
+        if (path === '/about') {
+          window.location.replace('/about/' + search + hash);
+          return;
+        }
+        if (path === '/repository') {
+          window.location.replace('/repository/' + search + hash);
+          return;
+        }
+      } catch (e) {
+        // ignore
+      }
+    })();
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="box">
+      <div class="brand center" style="justify-content:center;">
+        <img src="assets/img/akoume logo2.png" alt="Akoume" width="110" height="65" />
+      </div>
+      <h1 class="display-2 mt-2">Page not found</h1>
+      <p class="mt-1 muted">We couldnâ€™t find the page youâ€™re looking for.</p>
+      <p class="mt-1">
+        Try returning to the <a class="btn btn-outline" href="https://akoume.in/">Home page</a> or open the
+        <a class="btn btn-primary" href="https://akoume.in/repository">Repository</a>.
+      </p>
+      <p class="mt-2 text-sm muted">If you were trying to open a blog without â€œ.htmlâ€, weâ€™ll redirect you automatically.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Kiran Mental Health Rehabilitation Helpline",
+    "timing": "24/7",
+    "contact": "1800-599-0019",
+    "description": "Offers support for mental health issues including anxiety, depression, and suicidal thoughts."
+  },
+  {
+    "name": "Snehi",
+    "timing": "24/7",
+    "contact": "91-22-2772 6771",
+    "description": "Provides emotional support and counseling for individuals in distress."
+  },
+  {
+    "name": "ICall by TISS",
+    "timing": "Mon-Sat, 8 AM to 10 PM",
+    "contact": "915-298-7821, icall@tiss.edu",
+    "description": "Offers telephonic and email-based counseling services in multiple languages."
+  },
+  {
+    "name": "Fortis Stress Helpline",
+    "timing": "24/7",
+    "contact": "+91 837-680-4102",
+    "description": "Offers support for stress, anxiety, and other mental health issues."
+  },
+  {
+    "name": "Samaritans Mumbai",
+    "timing": "3 PM to 9 PM, all days",
+    "contact": "+91 842-298-4528 / +91 842-298-4529 / +91 842-298-4530, talk2samaritans@gmail.com",
+    "description": "Provides emotional support for those feeling distressed or suicidal."
+  },
+  {
+    "name": "Lifeline Foundation",
+    "timing": "10 AM to 10 PM",
+    "contact": "+91 915-298-7821",
+    "description": "Offers support for mental health issues including depression and anxiety."
+  },
+  {
+    "name": "Vandrevala Foundation",
+    "timing": "24/7",
+    "contact": "1860-266-2345 / +91 9999-666-555, help@vandrevalafoundation.com",
+    "description": "Provides mental health support and emotional crisis intervention for all age groups."
+  },
+  {
+    "name": "Snehi Youth Helpline",
+    "timing": "Not specified",
+    "contact": "011-6645 2222 / 011-6645 5555",
+    "description": "Offers counseling and emotional support for youth and adolescents."
+  },
+  {
+    "name": "NIMHANS COVID-19 Mental Health Helpline",
+    "timing": "24/7",
+    "contact": "080-4611 0007",
+    "description": "Provides support for stress, anxiety, and mental health issues related to the COVID-19 pandemic."
+  },
+  {
+    "name": "Sangath",
+    "timing": "Mon-Sat, 10 AM to 6 PM",
+    "contact": "+91 782-888-1166, contactus@sangath.in",
+    "description": "Offers support and counseling for LGBTQ+ individuals."
+  },
+  {
+    "name": "CHILDLINE India",
+    "timing": "24/7",
+    "contact": "1098",
+    "description": "National helpline for children in distress."
+  },
+  {
+    "name": "National Commission for Women (NCW)",
+    "timing": "24/7",
+    "contact": "1091",
+    "description": "Provides support for women facing mental health issues, domestic violence, and distress."
+  },
+  {
+    "name": "Parivarthan",
+    "timing": "Mon-Sat, 1 PM to 10 PM",
+    "contact": "+91 767-660-2602",
+    "description": "Offers telephonic counseling for emotional and mental health issues."
+  },
+  {
+    "name": "Sumaitri",
+    "timing": "2 PM to 10 PM, all days except Monday",
+    "contact": "+91 011-2338 9090 / +91 011-2338 9091",
+    "description": "Provides support for those feeling suicidal or in emotional distress."
+  }
+]

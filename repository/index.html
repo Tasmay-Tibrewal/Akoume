@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akoume: Repository</title>
+  <meta name="description" content="Healing Grove, Whispering Winds, Mindful Meadows, Calm Waters, and Serenity Leaves - curated resources for mental well-being." />
+  <link rel="canonical" href="https://akoume.in/repository" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../assets/img/akoume logo4.png" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <style>
+    /* Repository page scoped layout fixes */
+    /* Prevent scroll anchoring from shifting carousels when we prepend/mutate items */
+    [data-track] { overflow-anchor: none; }
+
+    /* 1) Remove internal gutters and fades so viewport equals container width */
+    #healing-groves .carousel,
+    #whispering-winds .carousel,
+    #mindful-meadows .carousel {
+      padding-inline: 0;
+      overflow: visible; /* allow chevrons to sit outside without clipping */
+    }
+    #healing-groves .carousel-viewport,
+    #whispering-winds .carousel-viewport,
+    #mindful-meadows .carousel-viewport {
+      padding-inline: 0;
+    }
+    #healing-groves .carousel-viewport::before,
+    #healing-groves .carousel-viewport::after,
+    #whispering-winds .carousel-viewport::before,
+    #whispering-winds .carousel-viewport::after,
+    #mindful-meadows .carousel-viewport::before,
+    #mindful-meadows .carousel-viewport::after { width: 0; }
+
+    /* 2) Always start rows-1 tracks from the left */
+    #healing-groves .carousel.rows-1 .carousel-track,
+    #whispering-winds .carousel.rows-1 .carousel-track {
+      padding: 4px 0 var(--space-2);
+      justify-content: flex-start;
+    }
+
+    /* 3) Place navigation buttons outside the content area (further out + centered glyph) */
+    #healing-groves .carousel-btn.prev,
+    #whispering-winds .carousel-btn.prev,
+    #mindful-meadows .carousel-btn.prev { left: -96px; }
+    #healing-groves .carousel-btn.next,
+    #whispering-winds .carousel-btn.next,
+    #mindful-meadows .carousel-btn.next { right: -96px; }
+
+    /* Ensure button content is centered */
+    #healing-groves .carousel-btn,
+    #whispering-winds .carousel-btn,
+    #mindful-meadows .carousel-btn { display: inline-flex; align-items: center; justify-content: center; }
+
+    /* Chevron glyph centering: strict absolute center */
+    #healing-groves .carousel-btn,
+    #whispering-winds .carousel-btn,
+    #mindful-meadows .carousel-btn { display: grid; place-items: center; line-height: 0; }
+    #healing-groves .carousel-btn::before,
+    #whispering-winds .carousel-btn::before,
+    #mindful-meadows .carousel-btn::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      border-right: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      transform-origin: center center;
+      margin: 0;
+    }
+    #healing-groves .carousel-btn.next::before,
+    #whispering-winds .carousel-btn.next::before,
+    #mindful-meadows .carousel-btn.next::before {
+      /* Nudge right-chevron slightly left for perfect optical centering */
+      transform: translate(calc(-50% - 1px), -50%) rotate(-45deg);
+    }
+    #healing-groves .carousel-btn.prev::before,
+    #whispering-winds .carousel-btn.prev::before,
+    #mindful-meadows .carousel-btn.prev::before {
+      /* Nudge left-chevron slightly right for perfect optical centering */
+      transform: translate(calc(-50% + 1px), -50%) rotate(135deg);
+    }
+
+    /* 4) Mindful Meadows: make 4 cards fit and reduce size (~75%) */
+    /* Remove global min-width clamp so 4 columns can shrink */
+    #mindful-meadows .carousel-track > * {
+      min-width: 0 !important;
+    }
+    /* Ensure exactly 4 columns within the viewport width */
+    #mindful-meadows .carousel.cols-4 .carousel-track {
+      grid-auto-columns: minmax(200px, calc((100% - (var(--space-5) * 3)) / 4));
+    }
+
+    /* Small screens: keep chevrons slightly inset to avoid clipping */
+    @media (max-width: 680px) {
+      #healing-groves .carousel-btn.prev,
+      #whispering-winds .carousel-btn.prev,
+      #mindful-meadows .carousel-btn.prev { left: -24px; }
+      #healing-groves .carousel-btn.next,
+      #whispering-winds .carousel-btn.next,
+      #mindful-meadows .carousel-btn.next { right: -24px; }
+    }
+
+    /* duplicate centering block removed; earlier block defines final chevron sizing/centering */
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Akoume: Repository" />
+  <meta property="og:description" content="Explore expert contacts, conversations, blogs, and helplines. Subscribe to our newsletter for weekly insights." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://akoume.in/repository" />
+  <meta property="og:image" content="https://akoume.in/assets/img/repo-bg2.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Akoume: Repository" />
+  <meta name="twitter:description" content="Explore expert contacts, conversations, blogs, and helplines. Subscribe to our newsletter for weekly insights." />
+  <meta name="twitter:image" content="https://akoume.in/assets/img/repo-bg2.jpg" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES2SW6WPST"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-ES2SW6WPST');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a href="https://akoume.in/" class="brand" aria-label="Akoume home">
+        <img src="../assets/img/akoume logo2.png" alt="Akoume logo" width="110" height="65" />
+        <span class="brand-title text-sm visually-hidden">Akoume</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-nav-toggle>
+        <img data-nav-toggle-icon src="../assets/img/Hamburger_icon.svg" alt="" width="28" height="28" />
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="https://akoume.in/">Home</a>
+        <a href="https://akoume.in/about">About</a>
+        <a href="https://akoume.in/#work-text">Resources</a>
+        <a href="https://akoume.in/repository">Repository</a>
+        <a href="https://forms.gle/viMwzZWjSicmLdxu7" target="_blank" rel="noopener">Volunteer</a>
+        <a href="https://akoume.in/#contact-us">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Repo hero -->
+    <section class="repo-hero" aria-label="Repository cover">
+      <div class="overlay">
+        <div class="container" style="padding-block: var(--space-9);">
+          <h1 class="display-1 title">Repository</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Healing Grove -->
+    <section id="healing-groves" class="container">
+      <h2 class="display-2">Healing grove</h2>
+      <p class="muted mt-1">A contact list of psychologists and mental health professionals for consultations.</p>
+
+      <div class="carousel rows-1 mt-3" data-carousel>
+        <button class="carousel-btn prev" type="button" aria-label="Previous" data-prev>&lsaquo;</button>
+        <div class="carousel-viewport">
+          <div id="experts-container" class="carousel-track" data-track>
+            <!-- Static fallback expert cards -->
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/lakshmi-jain.jpg" alt="Lakshmi Jain" loading="lazy" />
+              <p class="title mt-1">Lakshmi Jain</p>
+              <p class="muted">Aspiring Clinical Psychologist</p>
+              <p class="text-sm mt-1">Age: 22 Experience: 1 year<br/>Contact: +91 956 052 6546<br/>Fee: Free<br/>Availability: All days</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/lakshmi-jain-620993187/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/dr-rl-ravishankar.jpg" alt="Dr. R L Ravishankar" loading="lazy" />
+              <p class="title mt-1">Dr. R L Ravishankar</p>
+              <p class="muted">Psychologist</p>
+              <p class="text-sm mt-1">Age: 62 Experience: 32 years<br/>Contact: +91 984 104 3308<br/>Fee: 500/session<br/>Availability: Weekdays</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/dr-ravi-shankar-5bb1b696/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/dr-suja-mk.jpg" alt="Dr. Suja M K" loading="lazy" />
+              <p class="title mt-1">Dr. Suja M K</p>
+              <p class="muted">Mental Health Consultant</p>
+              <p class="text-sm mt-1">Age: 54 Experience: 26 years<br/>Email: ruhicounselling@gmail.com<br/>Fee: 1000/session<br/>Availability: Saturday, Sunday</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/dr-suja-m-k-ph-d-b2298a7b/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/purva-dixit.jpg" alt="Purva Dixit" loading="lazy" />
+              <p class="title mt-1">Purva Dixit</p>
+              <p class="muted">Clinical Psychologist</p>
+              <p class="text-sm mt-1">Age: 47 Experience: 22 years<br/>Contact: +91 901 103 3772<br/>Fee: 750/session<br/>Availability: Weekdays, Saturday</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/purva-dixit-55a46b48/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/ena-gupta.jpg" alt="Ena Gupta" loading="lazy" />
+              <p class="title mt-1">Ena Gupta</p>
+              <p class="muted">Clinical Psychologist</p>
+              <p class="text-sm mt-1">Age: 30 Experience: 8 years<br/>Contact: +91 981 142 9266<br/>Fee: 600/session<br/>Availability: All days</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/ena-gupta-5150a3128/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/masiha-shabeer.jpg" alt="Masiha Shabeer" loading="lazy" />
+              <p class="title mt-1">Masiha Shabeer</p>
+              <p class="muted">Psychologist</p>
+              <p class="text-sm mt-1">Age: 27 Experience: 5 years<br/>Contact: +91 739 597 8708<br/>Fee: 1500/session<br/>Availability: Weekdays</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/masiha-shabeer-905406131/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/mridhula-maha.jpg" alt="Mridhula Maha" loading="lazy" />
+              <p class="title mt-1">Mridhula Maha</p>
+              <p class="muted">Counselling Psychologist</p>
+              <p class="text-sm mt-1">Age: 27 Experience: 5 years<br/>Contact: +91 994 144 9029<br/>Fee: 600/session<br/>Availability: Weekdays, Saturday</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/mridhula-maha-34a058b0/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/pragya-gopinath.jpg" alt="Pragya Gopinath" loading="lazy" />
+              <p class="title mt-1">Pragya Gopinath</p>
+              <p class="muted">Counselling Psychologist</p>
+              <p class="text-sm mt-1">Age: 26 Experience: 3 years<br/>Contact: +91 767 857 2708<br/>Fee: 1500/session (Sliding scale)<br/>Availability: All days</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/pragya-gopinath/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/yukti-rastogi.jpg" alt="Yukti Rastogi" loading="lazy" />
+              <p class="title mt-1">Yukti Rastogi</p>
+              <p class="muted">Psychologist</p>
+              <p class="text-sm mt-1">Age: 24 Experience: 2 years<br/>Contact: +91 851 008 2979<br/>Fee: 800/session<br/>Availability: All days</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/yukti-rustagi/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/vidhi-sharma.jpg" alt="Vidhi Sharma" loading="lazy" />
+              <p class="title mt-1">Vidhi Sharma</p>
+              <p class="muted">Consultant Psychologist</p>
+              <p class="text-sm mt-1">Age: 24 Experience: 1 year<br/>Fee: 1200/session (Negotiable)<br/>Availability: All days</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/vidhi-sharma-0909211a7/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/harshita-jain.jpg" alt="Harshita Jain" loading="lazy" />
+              <p class="title mt-1">Harshita Jain</p>
+              <p class="muted">Clinical Psychologist</p>
+              <p class="text-sm mt-1">Age: 24 Experience: 1 year<br/>Contact: +91 970 694 1993<br/>Fee: 1400/session (Sliding scale)<br/>Availability: All days</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/harshita-jain-cp/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/zeba-hussain.jpg" alt="Zeba Hussain" loading="lazy" />
+              <p class="title mt-1">Zeba Hussain</p>
+              <p class="muted">Clinical Psychologist</p>
+              <p class="text-sm mt-1">Age: 22 Experience: 1 year<br/>Contact: +91 701 189 3993<br/>Fee: 600/session<br/>Availability: Weekends</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/zeba-hussain-480890205/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+
+            <article class="card card-padding expert-card">
+              <img class="avatar" src="../assets/img/ankit-satija2.jpg" alt="Ankit Satija" loading="lazy" />
+              <p class="title mt-1">Ankit Satija</p>
+              <p class="muted">Counselling Psychologist</p>
+              <p class="text-sm mt-1">Experience: 1 year<br/>Contact: +91 959 958 5311<br/>Fee: 650/session<br/>Availability: Weekdays</p>
+              <p class="mt-1"><a class="btn btn-outline text-sm" href="https://www.linkedin.com/in/ankit-satija/" target="_blank" rel="noopener">LinkedIn</a></p>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-btn next" type="button" aria-label="Next" data-next>&rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- Whispering Winds -->
+    <section id="whispering-winds" class="container mt-4">
+      <h2 class="display-2">Whispering Winds</h2>
+      <p class="muted mt-1">Short podcast-style snippets of our conversations with mental health professionals.</p>
+      <div class="carousel rows-1 mt-2" data-carousel>
+        <button class="carousel-btn prev" type="button" aria-label="Previous" data-prev>&lsaquo;</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" data-track>
+            <div class="card rounded" style="overflow:hidden; aspect-ratio:16/9;">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oxx564hMBUI?si=mng_ed9m8icdgBt3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="card rounded" style="overflow:hidden; aspect-ratio:16/9;">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DxIDKZHW3-E?si=WxlouuwkDxEigo73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="card rounded" style="overflow:hidden; aspect-ratio:16/9;">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rkZl2gsLUp4?si=zVMgxePv57WfGlRL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" type="button" aria-label="Next" data-next>&rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- Mindful Meadows -->
+    <section id="mindful-meadows" class="container mt-4">
+      <h2 class="display-2">Mindful Meadows</h2>
+      <p class="muted mt-1">Blogs and articles that discuss different aspects of mental health. (Tap the card)</p>
+      <div class="carousel rows-2 cols-4 mt-2" data-carousel>
+        <button class="carousel-btn prev" type="button" aria-label="Previous" data-prev>&lsaquo;</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" data-track>
+            <a class="card card-hover" href="https://akoume.in/blogs/the_silent_epidemic.html" aria-label="The Silent Epidemic">
+              <img src="../assets/img/4.png" alt="Blog cover: The Silent Epidemic" loading="lazy" />
+            </a>
+            <a class="card card-hover" href="https://akoume.in/blogs/breaking_the_silence.html" aria-label="Breaking the Silence">
+              <img src="../assets/img/2.png" alt="Blog cover: Breaking the Silence" loading="lazy" />
+            </a>
+            <a class="card card-hover" href="https://akoume.in/blogs/hidden_struggle.html" aria-label="Hidden Struggle">
+              <img src="../assets/img/3.png" alt="Blog cover: Hidden Struggle" loading="lazy" />
+            </a>
+            <a class="card card-hover" href="https://akoume.in/blogs/why_do_we_lose_credibility.html" aria-label="Why Do We Lose Credibility">
+              <img src="../assets/img/1.png" alt="Blog cover: Why Do We Lose Credibility" loading="lazy" />
+            </a>
+            <a class="card card-hover" href="https://akoume.in/blogs/the%20_pressure_cooker.html" aria-label="The Pressure Cooker">
+              <img src="../assets/img/5.png" alt="Blog cover: The Pressure Cooker" loading="lazy" />
+            </a>
+            <a class="card card-hover" href="https://akoume.in/blogs/live_in_the_now.html" aria-label="Live in the Now">
+              <img src="../assets/img/6.png" alt="Blog cover: Live in the Now" loading="lazy" />
+            </a>
+            <a class="card card-hover" href="https://akoume.in/blogs/shadows_of_the_mind.html" aria-label="Shadows of the Mind">
+              <img src="../assets/img/7.png" alt="Blog cover: Shadows of the Mind" loading="lazy" />
+            </a>
+            <a class="card card-hover" href="https://akoume.in/blogs/toxic_masculinity.html" aria-label="Toxic Masculinity">
+              <img src="../assets/img/8.png" alt="Blog cover: Toxic Masculinity" loading="lazy" />
+            </a>
+          </div>
+        </div>
+        <button class="carousel-btn next" type="button" aria-label="Next" data-next>&rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- Serenity Leaves -->
+    <section id="serenity-leaves" class="container mt-4">
+      <h2 class="display-2">Serenity leaves</h2>
+      <p class="muted mt-1">A weekly newsletter with helpful articles and tips about mental health.<br><br></p>
+
+      <form class="newsletter-form mt-2" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeRxfRljbfeWAxk70ZP2AZxK9sbVEHQB0nDgmJhrvD87bQouw/formResponse" method="post" target="formTargetNewsletter" data-form-id="newsletter-form" style="max-width:700px; margin-inline:auto;">
+        <div class="form-row">
+          <div class="field">
+            <label for="nl-first-name">First Name</label>
+            <input class="inputbox" id="nl-first-name" name="entry.1831841152" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="nl-last-name">Last Name</label>
+            <input class="inputbox" id="nl-last-name" name="entry.1087323218" type="text" autocomplete="family-name" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="nl-email">Email Id</label>
+          <input class="inputbox" id="nl-email" name="entry.663916218" type="email" autocomplete="email" required />
+        </div>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+      <iframe name="formTargetNewsletter" id="formTargetNewsletter" data-form-target data-form-id="newsletter-form" style="display:none;" title="Hidden"></iframe>
+    </section>
+
+    <!-- Calm Waters -->
+    <section id="calm-waters" class="container mt-4">
+      <h2 class="display-2">Calm Waters</h2>
+      <p class="muted mt-1">Collection of curated helplines, for those in need.</p>
+
+      <div class="mt-2 table-scroll">
+        <table class="table" aria-label="Helplines">
+          <thead>
+            <tr>
+              <th>Name of Helpline</th>
+              <th>Timing</th>
+              <th>Contact</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="helplines-tbody">
+            <!-- Static fallback rows (will be replaced if JSON loads) -->
+            <tr><td>Kiran Mental Health Rehabilitation Helpline</td><td>24/7</td><td>1800-599-0019</td><td>Offers support for mental health issues including anxiety, depression, and suicidal thoughts.</td></tr>
+            <tr><td>Snehi</td><td>24/7</td><td>91-22-2772 6771</td><td>Provides emotional support and counseling for individuals in distress.</td></tr>
+            <tr><td>ICall by TISS</td><td>Mon-Sat, 8 AM to 10 PM</td><td>915-298-7821, icall@tiss.edu</td><td>Offers telephonic and email-based counseling services in multiple languages.</td></tr>
+            <tr><td>Fortis Stress Helpline</td><td>24/7</td><td>+91 837-680-4102</td><td>Offers support for stress, anxiety, and other mental health issues.</td></tr>
+            <tr><td>Samaritans Mumbai</td><td>3 PM to 9 PM, all days</td><td>+91 842-298-4528 / +91 842-298-4529 / +91 842-298-4530, talk2samaritans@gmail.com</td><td>Provides emotional support for those feeling distressed or suicidal.</td></tr>
+            <tr><td>Lifeline Foundation</td><td>10 AM to 10 PM</td><td>+91 915-298-7821</td><td>Offers support for mental health issues including depression and anxiety.</td></tr>
+            <tr><td>Vandrevala Foundation</td><td>24/7</td><td>1860-266-2345 / +91 9999-666-555, help@vandrevalafoundation.com</td><td>Provides mental health support and emotional crisis intervention for all age groups.</td></tr>
+            <tr><td>Snehi Youth Helpline</td><td>Not specified</td><td>011-6645 2222 / 011-6645 5555</td><td>Offers counseling and emotional support for youth and adolescents.</td></tr>
+            <tr><td>NIMHANS COVID-19 Mental Health Helpline</td><td>24/7</td><td>080-4611 0007</td><td>Provides support for stress, anxiety, and mental health issues related to the COVID-19 pandemic.</td></tr>
+            <tr><td>Sangath</td><td>Mon-Sat, 10 AM to 6 PM</td><td>+91 782-888-1166, contactus@sangath.in</td><td>Offers support and counseling for LGBTQ+ individuals.</td></tr>
+            <tr><td>CHILDLINE India</td><td>24/7</td><td>1098</td><td>National helpline for children in distress.</td></tr>
+            <tr><td>National Commission for Women (NCW)</td><td>24/7</td><td>1091</td><td>Provides support for women facing mental health issues, domestic violence, and distress.</td></tr>
+            <tr><td>Parivarthan</td><td>Mon-Sat, 1 PM to 10 PM</td><td>+91 767-660-2602</td><td>Offers telephonic counseling for emotional and mental health issues.</td></tr>
+            <tr><td>Sumaitri</td><td>2 PM to 10 PM, all days except Monday</td><td>+91 011-2338 9090 / +91 011-2338 9091</td><td>Provides support for those feeling suicidal or in emotional distress.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img src="../assets/img/akoume logo3.png" alt="Akoume" width="110" height="65" />
+          <span class="brand-title">Akoume</span>
+        </div>
+        <p class="mt-1">We hear you. We see you. We're here for you.</p>
+      </div>
+      <div class="social" aria-label="Social media">
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/akoume-me" target="_blank" rel="noopener">
+          <img src="../assets/img/linkedin.png" width="24" height="24" alt="LinkedIn" />
+        </a>
+        <a aria-label="Instagram" href="https://www.instagram.com/akoume.me/" target="_blank" rel="noopener">
+          <img src="../assets/img/instagram.png" width="24" height="24" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/repository.js?v=7" defer></script>
+</body>
+</html>
