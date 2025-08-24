@@ -107,6 +107,19 @@
     }
 
     /* duplicate centering block removed; earlier block defines final chevron sizing/centering */
+  :root { --container-w: 1197px; } /* repository page: -3px content width tweak */
+
+  /* Hero: simplified (remove image and dark overlay; use theme background) */
+    .repo-hero { background-image: none !important; background: linear-gradient(180deg, var(--color-bg), #cfeae7) !important; }
+    .repo-hero .overlay { background: transparent !important; }
+    .repo-hero .title { color: var(--color-text) !important; }
+
+    /* Repository: compact hero and description */
+    .repo-hero { background: linear-gradient(180deg, var(--color-primary-50), var(--color-bg)); border-bottom: 1px solid var(--color-border); }
+    .repo-hero .title { color: var(--color-text); }
+    .repo-hero .hero-inner { padding-block: var(--space-8); }
+    .repo-hero p { max-width: 70ch; color: var(--color-muted); }
+
   </style>
 
   <!-- Open Graph -->
@@ -159,10 +172,9 @@
   <main id="main">
     <!-- Repo hero -->
     <section class="repo-hero" aria-label="Repository cover">
-      <div class="overlay">
-        <div class="container" style="padding-block: var(--space-9);">
-          <h1 class="display-1 title">Repository</h1>
-        </div>
+      <div class="container hero-inner">
+        <h1 class="display-1 title">Repository</h1>
+        <p class="text-lg mt-1 muted">Explore expert contacts, short conversations, blogs, our weekly newsletter, and trusted helplines — all in one place.</p>
       </div>
     </section>
 

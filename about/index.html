@@ -12,6 +12,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="../assets/img/akoume logo4.png" />
   <link rel="stylesheet" href="../assets/css/base.css" />
+  <style>
+    /* About: clean, compact hero */
+    .about-hero { background: linear-gradient(180deg, var(--color-primary-50), var(--color-bg)); color: var(--color-text); border-bottom: 1px solid var(--color-border); }
+    .about-hero::after { background: transparent; }
+  </style>
+<style>
+    /* About hero: remove image/overlay and use theme text color on soft background */
+    .about-hero { 
+      background: linear-gradient(180deg, var(--color-bg), #cfeae7) !important;
+      color: var(--color-text) !important;
+    }
+    .about-hero::after { background: transparent !important; }
+    .about-hero .about-title { color: var(--color-text) !important; }
+    .about-hero p { color: var(--color-text) !important; }
+  </style>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Akoume: About" />
@@ -63,9 +78,9 @@
   <main id="main">
     <!-- About hero -->
     <section class="about-hero" aria-label="About cover">
-      <div class="container" style="padding-block: var(--space-9);">
+      <div class="container" style="padding-block: var(--space-8);">
         <h1 class="about-title">About Us</h1>
-        <p class="text-xl" style="margin-top: 12px;">We hear you. We see you. We're here for you.</p>
+        <p class="text-xl muted" style="margin-top: 12px;">We hear you. We see you. We're here for you.</p>
         <p class="text-lg" style="margin-top: 24px; max-width: 70ch;">
           At Akoume, we understand the challenges inherent in the pursuit of mental well-being.
           Derived from the Greek word meaning "we listen", Akoume embodies our commitment to providing a safe and
