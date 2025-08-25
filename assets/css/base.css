@@ -145,8 +145,8 @@ footer.site-footer { padding-block: var(--space-7); background: var(--color-prim
 .hero { padding-block: var(--space-9); }
 .hero .eyebrow { color: var(--color-primary-600); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
 .hero .lead { font-size: clamp(1.05rem, 0.9rem + 0.6vw, 1.25rem); color: var(--color-muted); }
-.hero-illustration { position: relative; border-radius: var(--radius-lg); overflow: hidden; background: linear-gradient(120deg, rgba(58,147,129,0.1), rgba(219,239,237,0)); min-height: 360px; }
-.hero-illustration img { width: 100%; height: 100%; object-fit: cover; }
+.hero-illustration { position: relative; border-radius: 0; overflow: hidden; background: none; min-height: 360px; box-shadow: none; }
+.hero-illustration img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Resource cards (LARGER) */
 .resource-grid { display: grid; gap: var(--space-7); grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
