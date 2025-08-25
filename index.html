@@ -81,6 +81,30 @@
       </div>
     </section>
 
+    <!-- Trusted Campuses -->
+    <section class="trusted-partners" aria-labelledby="trusted-title">
+      <div class="container">
+        <h2 id="trusted-title" class="display-2 center">Trusted Campuses</h2>
+        <div class="logo-row mt-2" role="list" aria-label="Partner institutes">
+          <div class="logo-item" role="listitem" aria-label="IIT Kharagpur">
+            <img src="assets/img/iit-kgp.png" alt="IIT Kharagpur" />
+          </div>
+          <div class="logo-item" role="listitem" aria-label="IIT (BHU) Varanasi">
+            <img src="assets/img/iit-bhu.png" alt="IIT (BHU) Varanasi" />
+          </div>
+          <div class="logo-item" role="listitem" aria-label="IIT (ISM) Dhanbad">
+            <img src="assets/img/iit-ism-dhanbad.png" alt="IIT (ISM) Dhanbad" />
+          </div>
+          <div class="logo-item" role="listitem" aria-label="IIIT Jabalpur">
+            <img src="assets/img/iiit-jabalpur.png" alt="IIIT Jabalpur" />
+          </div>
+          <div class="logo-item" role="listitem" aria-label="Amrita Vishwa Vidyapeetham">
+            <img src="assets/img/amrita-vishwa-vidyapeetham.png" alt="Amrita Vishwa Vidyapeetham" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Resources -->
     <section id="work-text">
       <div class="container">
@@ -254,6 +278,26 @@
       </div>
     </div>
   </footer>
+
+  <!-- Inline SVG filter definitions for brand duotone (preserves detail on filled logos) -->
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden;">
+    <defs>
+      <filter id="ak-brand-mono" color-interpolation-filters="sRGB">
+        <!-- Convert to luminance -->
+        <feColorMatrix type="matrix" values="
+          0.2126 0.7152 0.0722 0 0
+          0.2126 0.7152 0.0722 0 0
+          0.2126 0.7152 0.0722 0 0
+          0       0      0      1 0" />
+        <!-- Duotone map: dark -> brand (#3a9381), light -> white -->
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.227 1"/>
+          <feFuncG type="table" tableValues="0.576 1"/>
+          <feFuncB type="table" tableValues="0.506 1"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
 
   <script src="assets/js/main.js" defer></script>
 </body>

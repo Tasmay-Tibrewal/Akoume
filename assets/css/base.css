@@ -32,6 +32,8 @@
   --space-10: 128px;
 
   --font-sans: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+  /* Filter to tint logos to brand primary color (#3a9381) */
+  --brand-tint-filter: brightness(0) saturate(100%) invert(43%) sepia(25%) saturate(582%) hue-rotate(124deg) brightness(86%) contrast(90%);
 }
 
 /* Reset */
@@ -79,8 +81,31 @@ header.site-header { position: sticky; top: 0; z-index: 100; background: rgba(21
 .brand img { height: 44px; width: auto; }
 .brand-title { font-weight: 700; letter-spacing: 0.02em; }
 .nav-links { display: flex; align-items: center; gap: var(--space-3); }
-.nav-links a { font-weight: 600; padding: 8px 12px; border-radius: 999px; }
-.nav-links a:is(:hover, :focus-visible) { background: var(--color-primary-50); outline: none; }
+.nav-links a {
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;           /* prevents layout shift on hover */
+  text-decoration: none;                    /* no underline by default */
+  transition: background 150ms ease,
+              color 150ms ease,
+              box-shadow 150ms ease,
+              border-color 150ms ease;
+}
+.nav-links a:is(:hover, :focus-visible) {
+  /* improved contrast + glassy pill */
+  text-decoration: none;                    /* remove underline on hover */
+  color: var(--color-primary-600);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.55)),
+    rgba(58,147,129,0.26);                  /* brand-tinted backdrop */
+  border-color: rgba(58,147,129,0.32);
+  box-shadow: 0 2px 8px rgba(58,147,129,0.12),
+              inset 0 1px 0 rgba(255,255,255,0.35);
+  -webkit-backdrop-filter: saturate(1.1) blur(2px);
+  backdrop-filter: saturate(1.1) blur(2px);
+  outline: none;
+}
 .nav-toggle { display: none; background: transparent; border: 0; padding: 10px; border-radius: 8px; }
 .nav-toggle:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
 
@@ -148,6 +173,41 @@ footer.site-footer { padding-block: var(--space-7); background: var(--color-prim
 .hero-illustration { position: relative; border-radius: 0; overflow: hidden; background: none; min-height: 360px; box-shadow: none; }
 .hero-illustration img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* Trusted partners */
+.trusted-partners { padding-block: var(--space-4) var(--space-3); margin-bottom: 130px;}
+.trusted-partners h2 { margin-bottom: var(--space-2); }
+.trusted-partners .logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+  flex-wrap: nowrap;             /* keep single row */
+  overflow-x: auto;              /* allow scroll on small screens */
+  padding: var(--space-1) var(--space-2);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;         /* Firefox: hide scrollbar */
+}
+.trusted-partners .logo-row::-webkit-scrollbar { display: none; } /* WebKit: hide scrollbar */
+.trusted-partners .logo-item { flex: 0 0 auto; opacity: 1; transition: transform 120ms ease, opacity 120ms ease; }
+.trusted-partners .logo-item:is(:hover, :focus-within) { transform: translateY(-2px); opacity: 1; }
+/* Larger, brand-tinted, monochrome logos */
+.trusted-partners .logo-item img {
+  /* 25% larger overall */
+  height: clamp(100px, 13vw, 200px);
+  width: auto;
+  display: block;
+  /* Uniform brand tint with more separation */
+  filter: var(--brand-tint-filter) contrast(1.25) brightness(1.25);
+  max-width: clamp(170px, 22.5vw, 305px);
+  object-fit: contain;
+}
+.trusted-partners .logo-item img[src*="amrita-vishwa-vidyapeetham"] {
+  /* Amrita: ensure white text on brand background */
+  filter: url(#ak-brand-mono) contrast(1.1) brightness(0.9);
+  height: clamp(100px, 13vw, 200px);
+  max-width: clamp(170px, 22.5vw, 305px);
+}
+
 /* Resource cards (LARGER) */
 .resource-grid { display: grid; gap: var(--space-7); grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 @media (max-width: 680px) { .resource-grid { grid-template-columns: 1fr; gap: var(--space-6); } }
@@ -167,8 +227,8 @@ footer.site-footer { padding-block: var(--space-7); background: var(--color-prim
 .contact .link { color: #fff; text-decoration: underline; }
 
 /* Copy chip (LARGER + tick on success) */
-.copy-chip { display: inline-flex; gap: 10px; align-items: center; padding: 10px 14px; min-height: 40px; border-radius: 999px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.25); cursor: pointer; transition: background 120ms ease, transform 120ms ease, border-color 120ms ease; }
-.copy-chip svg { width: 16px; height: 16px; }
+.copy-chip { display: inline-flex; gap: 10px; align-items: center; padding: 8px 10px; min-height: 34px; border-radius: 999px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.25); cursor: pointer; transition: background 120ms ease, transform 120ms ease, border-color 120ms ease; }
+.copy-chip svg { width: 14px; height: 14px; }
 .copy-chip .icon-tick { display: none; }
 .copy-chip.copied .icon-copy { display: none; }
 .copy-chip.copied .icon-tick { display: inline; }
@@ -284,3 +344,6 @@ footer.site-footer { padding-block: var(--space-7); background: var(--color-prim
 .prose p { margin-bottom: 1rem; }
 .prose strong { font-weight: 700; }
 .mid-title-blog { font-weight: 800; font-size: 1.75rem; margin-bottom: 0.5rem; }
+
+/* Tighten spacing before the Resources section */
+#work-text { padding-top: var(--space-4); }
