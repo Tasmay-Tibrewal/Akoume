@@ -109,16 +109,37 @@
     /* duplicate centering block removed; earlier block defines final chevron sizing/centering */
   :root { --container-w: 1197px; } /* repository page: -3px content width tweak */
 
-  /* Hero: simplified (remove image and dark overlay; use theme background) */
-    .repo-hero { background-image: none !important; background: linear-gradient(180deg, var(--color-bg), #cfeae7) !important; }
-    .repo-hero .overlay { background: transparent !important; }
-    .repo-hero .title { color: var(--color-text) !important; }
+  /* Legacy repo-hero overrides removed; consolidated below */
 
-    /* Repository: compact hero and description */
-    .repo-hero { background: linear-gradient(180deg, var(--color-primary-50), var(--color-bg)); border-bottom: 1px solid var(--color-border); }
-    .repo-hero .title { color: var(--color-text); }
-    .repo-hero .hero-inner { padding-block: var(--space-8); }
-    .repo-hero p { max-width: 70ch; color: var(--color-muted); }
+    /* Compact repo-hero rules consolidated below */
+
+  /* Hero polish: stronger contrast + matte panel + weight */
+  .repo-hero {
+    background: radial-gradient(1200px 420px at 50% -10%, rgba(255,255,255,0.28), rgba(255,255,255,0) 60%),
+                linear-gradient(180deg, rgba(58,147,129,0.34), rgba(58,147,129,0.14));
+    border-bottom: 1px solid var(--color-border);
+  }
+  .repo-hero .title { color: var(--color-text); font-weight: 800 !important; }
+  .repo-hero .hero-inner { padding-block: var(--space-6); }
+  .repo-hero .hero-panel,
+  .about-hero .hero-panel {
+    background: rgba(255,255,255,0.56);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    -webkit-backdrop-filter: saturate(1.15) blur(6px);
+    backdrop-filter: saturate(1.15) blur(6px);
+    padding: var(--space-5);
+  }
+
+  /* Repository cards: glassy white like hero panel */
+  #healing-groves .card,
+  #whispering-winds .card,
+  #mindful-meadows .card {
+    background: rgba(255,255,255,0.56);
+    -webkit-backdrop-filter: saturate(1.15) blur(6px);
+    backdrop-filter: saturate(1.15) blur(6px);
+  }
 
   </style>
 
@@ -173,8 +194,10 @@
     <!-- Repo hero -->
     <section class="repo-hero" aria-label="Repository cover">
       <div class="container hero-inner">
-        <h1 class="display-1 title">Repository</h1>
-        <p class="text-lg mt-1 muted">Explore expert contacts, short conversations, blogs, our weekly newsletter, and trusted helplines — all in one place.</p>
+        <div class="hero-panel">
+          <h1 class="display-1 title">Repository</h1>
+          <p class="text-lg muted" style="margin-top: var(--space-2);">Explore expert contacts, short conversations, blogs, our weekly newsletter, and trusted helplines — all in one place.</p>
+        </div>
       </div>
     </section>
 
@@ -340,7 +363,7 @@
             <a class="card card-hover" href="https://akoume.in/blogs/why_do_we_lose_credibility.html" aria-label="Why Do We Lose Credibility">
               <img src="../assets/img/1.png" alt="Blog cover: Why Do We Lose Credibility" loading="lazy" />
             </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/the%20_pressure_cooker.html" aria-label="The Pressure Cooker">
+            <a class="card card-hover" href="https://akoume.in/blogs/the_pressure_cooker.html" aria-label="The Pressure Cooker">
               <img src="../assets/img/5.png" alt="Blog cover: The Pressure Cooker" loading="lazy" />
             </a>
             <a class="card card-hover" href="https://akoume.in/blogs/live_in_the_now.html" aria-label="Live in the Now">
