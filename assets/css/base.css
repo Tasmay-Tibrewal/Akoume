@@ -283,3 +283,4 @@ footer.site-footer { padding-block: var(--space-7); background: var(--color-prim
 .back-link:hover { text-decoration: underline; }
 .prose p { margin-bottom: 1rem; }
 .prose strong { font-weight: 700; }
+.mid-title-blog { font-weight: 800; font-size: 1.75rem; margin-bottom: 0.5rem; }
