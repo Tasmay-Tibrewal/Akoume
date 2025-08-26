@@ -273,6 +273,11 @@ footer.site-footer .social { display: flex; justify-content: flex-end; align-sel
   color: rgba(255,255,255,0.9);
 }
 .footer-bottom small { display: block; }
+/* Footer bottom container: reduce left/right margins (wider bar) */
+.footer-bottom .container {
+  max-width: var(--container-w-header);
+  padding-inline: var(--space-1);
+}
 
 /* Footer: stack on small screens */
 @media (max-width: 880px) {
