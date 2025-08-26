@@ -78,8 +78,8 @@ section { padding-block: var(--space-8); }
 header.site-header { position: sticky; top: 0; z-index: 100; background: rgba(219, 239, 237, 0.8); backdrop-filter: saturate(1.2) blur(8px); border-bottom: 1px solid var(--color-border); }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: var(--space-4); }
 .brand { display: flex; align-items: center; gap: var(--space-3); }
-.brand img { height: 44px; width: auto; }
-.brand-title { font-weight: 700; letter-spacing: 0.02em; }
+.brand img { height: 55px; width: auto; }
+.brand-title { font-weight: 700; letter-spacing: 0.02em; margin-bottom: 0px;}
 .nav-links { display: flex; align-items: center; gap: var(--space-3); }
 .nav-links a {
   font-weight: 600;
@@ -143,10 +143,144 @@ textarea { resize: vertical; min-height: 160px; }
 @media (max-width: 680px) { .form-row { grid-template-columns: 1fr; } }
 
 /* Footer */
-footer.site-footer { padding-block: var(--space-7); background: var(--color-primary); color: #fff; }
-.footer-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr auto; align-items: center; }
-.social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin-right: 8px; background: rgba(255,255,255,0.12); border-radius: 50%; }
-.social a:is(:hover, :focus-visible) { background: rgba(255,255,255,0.24); outline: none; }
+footer.site-footer {
+  padding-block: var(--space-7);
+  background: linear-gradient(180deg, var(--color-primary), var(--color-primary-600));
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.18);
+}
+/* Footer container: slightly tighter side padding (equal left/right) */
+footer.site-footer .container { padding-inline: var(--space-4); }
+
+/* Footer container: even tighter side padding (equal left/right) */
+footer.site-footer .container { padding-inline: var(--space-2); }
+
+.footer-grid {
+  display: grid;
+  gap: var(--space-6);
+  /* Rebalance: more room for text, compact nav near middle-left; nav may wrap to 2 rows */
+  grid-template-columns: minmax(580px, 1fr) minmax(240px, 360px) auto;
+  align-items: start; /* align columns to top to remove extra gap above nav buttons */
+}
+
+/* Larger brand in footer */
+footer.site-footer .brand img {
+  /* Logo ~25% larger than previous setting */
+  width: 100%;
+  height: auto;
+  max-width: 140px;       /* was 112px */
+  max-height: 100%;
+  object-fit: contain;
+  align-self: start;
+  grid-column: 1;
+  grid-row: 1 / -1; /* span all existing rows only */
+}
+footer.site-footer .brand-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: .01em;
+  line-height: 1.1;
+  margin: 0;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Footer lead and contact */
+.footer-lead {
+  margin-top: 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.95);
+  grid-column: 2;
+  grid-row: 2;
+}
+.footer-contact {
+  margin-top: 2px;
+  display: grid;
+  gap: 4px;
+  grid-column: 2;
+  grid-row: 3;
+}
+.footer-contact a { line-height: 1.35; }
+.footer-contact a { color: #fff; opacity: 0.95; text-decoration: none; font-weight: 600; }
+.footer-contact a:is(:hover, :focus-visible) { text-decoration: underline; }
+
+/* Footer nav (center column) */
+.footer-nav { display: flex; flex-wrap: wrap; gap: var(--space-1); justify-content: flex-start; align-self: start; justify-self: start; max-width: 100%; }
+.footer-nav a {
+  color: rgba(255,255,255,0.95);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: background 150ms ease, color 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+.footer-nav a:is(:hover,:focus-visible) {
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0.18));
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 2px 8px rgba(16,24,23,0.18), inset 0 1px 0 rgba(255,255,255,0.45);
+  outline: none;
+}
+
+/* Footer brand/text alignment: logo left, text stack to the right (auto rows) */
+.footer-grid > .brand {
+  display: grid;
+  /* Logo column widened by 25% so the logo can grow; text still gets the remainder */
+  grid-template-columns: clamp(100px, 10.5vw, 140px) 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-auto-rows: min-content; /* add extra rows only when needed */
+  align-items: start;
+  column-gap: var(--space-6); /* increase gap between logo and text */
+  row-gap: 2px; /* tighten title -> text stack */
+}
+/* Place tagline and contact under the title, aligned with the right of the logo */
+.footer-lead, .footer-contact { grid-column: 2; }
+
+/* Social icons (right column) */
+footer.site-footer .social { display: flex; justify-content: flex-end; align-self: start; }
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+.social a:is(:hover, :focus-visible) {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  outline: none;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255,255,255,0.20);
+  text-align: center;
+  color: rgba(255,255,255,0.9);
+}
+.footer-bottom small { display: block; }
+
+/* Footer: stack on small screens */
+@media (max-width: 880px) {
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  /* reset columned brand/text layout to stack nicely on mobile */
+  .footer-grid > .brand { display: block; }
+  footer.site-footer .brand { display: grid; justify-items: center; align-items: center; gap: var(--space-2); grid-template-columns: 1fr; }
+  footer.site-footer .brand img { height: 80px; }
+  .footer-nav { justify-content: center; flex-wrap: wrap; }
+  .social { justify-content: center; }
+  .social a { margin-right: 0; margin-inline: 6px; }
+  .footer-lead, .footer-contact { margin-top: 6px; grid-column: 1; }
+}
 
 /* Utilities */
 .muted { color: var(--color-muted); }
@@ -174,7 +308,7 @@ footer.site-footer { padding-block: var(--space-7); background: var(--color-prim
 .hero-illustration img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Trusted partners */
-.trusted-partners { padding-block: var(--space-4) var(--space-3); margin-bottom: 130px;}
+.trusted-partners { padding-block: var(--space-4) var(--space-3); margin-bottom: 100px;}
 .trusted-partners h2 { margin-bottom: var(--space-2); }
 .trusted-partners .logo-row {
   display: flex;
@@ -193,19 +327,19 @@ footer.site-footer { padding-block: var(--space-7); background: var(--color-prim
 /* Larger, brand-tinted, monochrome logos */
 .trusted-partners .logo-item img {
   /* 25% larger overall */
-  height: clamp(100px, 13vw, 200px);
+  height: clamp(81px, 10.53vw, 162px);
   width: auto;
   display: block;
   /* Uniform brand tint with more separation */
   filter: var(--brand-tint-filter) contrast(1.25) brightness(1.25);
-  max-width: clamp(170px, 22.5vw, 305px);
+  max-width: clamp(137.7px, 18.225vw, 247.05px);
   object-fit: contain;
 }
 .trusted-partners .logo-item img[src*="amrita-vishwa-vidyapeetham"] {
   /* Amrita: ensure white text on brand background */
   filter: url(#ak-brand-mono) contrast(1.1) brightness(0.9);
-  height: clamp(100px, 13vw, 200px);
-  max-width: clamp(170px, 22.5vw, 305px);
+  height: clamp(81px, 10.53vw, 162px);
+  max-width: clamp(137.7px, 18.225vw, 247.05px);
 }
 
 /* Resource cards (LARGER) */
