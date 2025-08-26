@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://akoume.in/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-26</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://akoume.in/about/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-26</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://akoume.in/repository/</loc>
-    <lastmod>2025-08-24</lastmod>
+    <lastmod>2025-08-26</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 
@@ -20,9 +20,9 @@
   <url><loc>https://akoume.in/blogs/the_silent_epidemic.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
   <url><loc>https://akoume.in/blogs/breaking_the_silence.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
   <url><loc>https://akoume.in/blogs/hidden_struggle.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://akoume.in/blogs/live_in_the_now.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
   <url><loc>https://akoume.in/blogs/shadows_of_the_mind.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://akoume.in/blogs/the%20_pressure_cooker.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://akoume.in/blogs/the _pressure_cooker.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://akoume.in/blogs/the_pressure_cooker.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
   <url><loc>https://akoume.in/blogs/toxic_masculinity.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
   <url><loc>https://akoume.in/blogs/why_do_we_lose_credibility.html</loc><lastmod>2025-08-24</lastmod><changefreq>monthly</changefreq></url>
 </urlset>

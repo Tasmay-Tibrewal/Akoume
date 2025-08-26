@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!navLinks) return;
     navLinks.classList.add('open');
     if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
-    if (navToggleIcon) navToggleIcon.src = 'assets/img/cross.svg';
+    if (navToggleIcon) navToggleIcon.src = '/assets/img/cross.svg';
     document.body.style.overflow = 'hidden';
   };
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!navLinks) return;
     navLinks.classList.remove('open');
     if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-    if (navToggleIcon) navToggleIcon.src = 'assets/img/Hamburger_icon.svg';
+    if (navToggleIcon) navToggleIcon.src = '/assets/img/Hamburger_icon.svg';
     document.body.style.removeProperty('overflow');
   };
 

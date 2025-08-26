@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Page not found â€” Akoume</title>
+  <title>Page not found — Akoume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" href="assets/img/akoume logo4.png" />
@@ -23,6 +23,12 @@
         var blogNoExt = /^\/blogs\/[^\/\.]+$/;
         if (blogNoExt.test(path)) {
           window.location.replace(path + '.html' + search + hash);
+          return;
+        }
+
+        // Redirect legacy blog filename with leading space to the normalized slug
+        if (path === '/blogs/the_pressure_cooker.html' || path === '/blogs/the _pressure_cooker.html') {
+          window.location.replace('/blogs/the_pressure_cooker.html' + search + hash);
           return;
         }
 
@@ -48,12 +54,12 @@
         <img src="assets/img/akoume logo2.png" alt="Akoume" width="110" height="65" />
       </div>
       <h1 class="display-2 mt-2">Page not found</h1>
-      <p class="mt-1 muted">We couldnâ€™t find the page youâ€™re looking for.</p>
+      <p class="mt-1 muted">We couldn't find the page you're looking for.</p>
       <p class="mt-1">
         Try returning to the <a class="btn btn-outline" href="https://akoume.in/">Home page</a> or open the
-        <a class="btn btn-primary" href="https://akoume.in/repository">Repository</a>.
+        <a class="btn btn-primary" href="https://akoume.in/repository/">Repository</a>.
       </p>
-      <p class="mt-2 text-sm muted">If you were trying to open a blog without â€œ.htmlâ€, weâ€™ll redirect you automatically.</p>
+      <p class="mt-2 text-sm muted">If you tried to open a blog without ".html", we'll redirect you automatically.</p>
     </section>
   </main>
 
