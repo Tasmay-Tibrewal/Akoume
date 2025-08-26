@@ -324,7 +324,7 @@ footer.site-footer .social { display: flex; justify-content: flex-end; align-sel
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-5);
+  gap: var(--space-7);
   flex-wrap: nowrap;             /* keep single row */
   overflow-x: auto;              /* allow scroll on small screens */
   padding: var(--space-1) var(--space-2);
@@ -385,14 +385,14 @@ footer.site-footer .social { display: flex; justify-content: flex-end; align-sel
 .about-hero .container { position: relative; z-index: 1; }
 .about-title { font-size: clamp(2.5rem, 1.6rem + 3vw, 4rem); font-weight: 800; }
 .about-grid { display: grid; gap: var(--space-6); }
-.team-grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.team-grid { display: grid; gap: var(--space-6); grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 1100px) { .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .team-grid { grid-template-columns: 1fr; } }
 .person { text-align: center; }
 .person .avatar { width: 100%; aspect-ratio: 7 / 9; border-radius: var(--radius-md); object-fit: cover; box-shadow: var(--shadow-sm); }
-.person .name { font-weight: 600; font-size: 1.25rem; margin-top: var(--space-3); }
+.person .name { font-weight: 600; font-size: clamp(1.35rem, 1.05rem + 1vw, 1.75rem); margin-top: var(--space-3); }
 .person .role { color: #e8f6f4; }
-.person .muted { margin-bottom: var(--space-3); }
+.person .muted { font-size: clamp(1.05rem, 0.95rem + 0.35vw, 1.25rem); margin-bottom: var(--space-3); }
 
 /* Repository page */
 .repo-hero { background-image: url("../img/repo-bg2.jpg"); background-size: cover; background-position: center 20%; }
