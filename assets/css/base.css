@@ -19,6 +19,7 @@
   --shadow-lg: 0 20px 40px rgba(17, 24, 39, 0.12);
 
   --container-w: 1200px;
+  --container-w-header: 1360px;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -76,6 +77,9 @@ section { padding-block: var(--space-8); }
 .skip-link:focus { left: 16px; top: 16px; width: auto; height: auto; padding: 8px 12px; background: var(--color-primary); color: #fff; border-radius: var(--radius-sm); z-index: 1000; }
 
 header.site-header { position: sticky; top: 0; z-index: 100; background: rgba(219, 239, 237, 0.8); backdrop-filter: saturate(1.2) blur(8px); border-bottom: 1px solid var(--color-border); }
+/* Spread navbar content by enlarging its max-width and keeping equal side padding */
+header.site-header .container { max-width: var(--container-w-header); padding-inline: var(--space-1); }
+header.site-header .container { padding-inline: var(--space-1); } /* further reduce side margins equally */
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: var(--space-4); }
 .brand { display: flex; align-items: center; gap: var(--space-3); }
 .brand img { height: 55px; width: auto; }
@@ -153,7 +157,7 @@ footer.site-footer {
 footer.site-footer .container { padding-inline: var(--space-4); }
 
 /* Footer container: even tighter side padding (equal left/right) */
-footer.site-footer .container { padding-inline: var(--space-2); }
+footer.site-footer .container { padding-inline: var(--space-1); }
 
 .footer-grid {
   display: grid;
@@ -171,7 +175,8 @@ footer.site-footer .brand img {
   max-width: 140px;       /* was 112px */
   max-height: 100%;
   object-fit: contain;
-  align-self: start;
+  align-self: center;      /* near top by offsetting upward from center */
+  transform: translateY(-12%);
   grid-column: 1;
   grid-row: 1 / -1; /* span all existing rows only */
 }
@@ -232,7 +237,7 @@ footer.site-footer .brand-title {
   grid-template-rows: repeat(2, min-content);
   grid-auto-rows: min-content; /* add extra rows only when needed */
   align-items: start;
-  column-gap: var(--space-6); /* increase gap between logo and text */
+  column-gap: var(--space-8); /* more gap between logo and text */
   row-gap: 2px; /* tighten title -> text stack */
 }
 /* Place tagline and contact under the title, aligned with the right of the logo */
