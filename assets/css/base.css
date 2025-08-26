@@ -320,24 +320,31 @@ footer.site-footer .social { display: flex; justify-content: flex-end; align-sel
 /* Trusted partners */
 .trusted-partners { padding-block: var(--space-4) var(--space-3); margin-bottom: 100px;}
 .trusted-partners h2 { margin-bottom: var(--space-2); }
+.trusted-partners .container { max-width: var(--container-w-header); padding-inline: var(--space-2); }
 .trusted-partners .logo-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-7);
-  flex-wrap: nowrap;             /* keep single row */
-  overflow-x: auto;              /* allow scroll on small screens */
+  flex-wrap: wrap;               /* allow multiple rows */
   padding: var(--space-1) var(--space-2);
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;         /* Firefox: hide scrollbar */
+  row-gap: var(--space-6);       /* vertical spacing between wrapped rows */
 }
 .trusted-partners .logo-row::-webkit-scrollbar { display: none; } /* WebKit: hide scrollbar */
-.trusted-partners .logo-item { flex: 0 0 auto; opacity: 1; transition: transform 120ms ease, opacity 120ms ease; }
+.trusted-partners .logo-item {
+  flex: 1 1 220px;               /* baseline width; allow wrap and growth */
+  min-width: 200px;              /* do not shrink below this */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
 .trusted-partners .logo-item:is(:hover, :focus-within) { transform: translateY(-2px); opacity: 1; }
 /* Larger, brand-tinted, monochrome logos */
 .trusted-partners .logo-item img {
-  /* 25% larger overall */
-  height: clamp(81px, 10.53vw, 162px);
+  /* Enforce a minimum size; can scale up, but not below 112px */
+  height: clamp(112px, 10.53vw, 162px);
   width: auto;
   display: block;
   /* Uniform brand tint with more separation */
@@ -348,7 +355,7 @@ footer.site-footer .social { display: flex; justify-content: flex-end; align-sel
 .trusted-partners .logo-item img[src*="amrita-vishwa-vidyapeetham"] {
   /* Amrita: ensure white text on brand background */
   filter: url(#ak-brand-mono) contrast(1.1) brightness(0.9);
-  height: clamp(81px, 10.53vw, 162px);
+  height: clamp(112px, 10.53vw, 162px);
   max-width: clamp(137.7px, 18.225vw, 247.05px);
 }
 

@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Ensure the legacy first five experts exist (from older site)
   const legacyFirstFive = [
     { name: 'Lakshmi Jain', title: 'Aspiring Clinical Psychologist', age: '22', experience: '< 1 year', contact: '+91 956 052 6546', email: '', fee: 'Free', availability: 'All days', linkedin: 'https://www.linkedin.com/in/lakshmi-jain-620993187/', image: 'lakshmi-jain.jpg' },
-    { name: 'Dr. R L Ravishankar', title: 'Psychologist', age: '62', experience: '32 years', contact: '+91 984 104 3308', email: '', fee: '₹500/session', availability: 'Weekdays', linkedin: 'https://www.linkedin.com/in/dr-ravi-shankar-5bb1b696/', image: 'dr-rl-ravishankar.jpg' },
     { name: 'Dr. Suja M K', title: 'Mental Health Consultant', age: '54', experience: '26 years', contact: '', email: 'ruhicounselling@gmail.com', fee: '₹1000/session', availability: 'Saturday, Sunday', linkedin: 'https://www.linkedin.com/in/dr-suja-m-k-ph-d-b2298a7b/', image: 'dr-suja-mk.jpg' },
+    { name: "Masiha Shabeer", title: "Psychologist", age: "27", experience: "5 years", contact: "+91 739 597 8708", email: "", fee: "₹1500/session", availability: "Weekdays", linkedin: "https://www.linkedin.com/in/masiha-shabeer-905406131/", image: "masiha-shabeer.jpg" },
+    { name: 'Dr. R L Ravishankar', title: 'Psychologist', age: '62', experience: '32 years', contact: '+91 984 104 3308', email: '', fee: '₹500/session', availability: 'Weekdays', linkedin: 'https://www.linkedin.com/in/dr-ravi-shankar-5bb1b696/', image: 'dr-rl-ravishankar.jpg' },
     { name: 'Purva Dixit', title: 'Clinical Psychologist', age: '47', experience: '22 years', contact: '+91 901 103 3772', email: '', fee: '₹750/session', availability: 'Weekdays, Saturday', linkedin: 'https://www.linkedin.com/in/purva-dixit-55a46b48/', image: 'purva-dixit.jpg' },
-    { name: 'Ena Gupta', title: 'Clinical Psychologist', age: '30', experience: '8 years', contact: '+91 981 142 9266', email: '', fee: '₹600/session', availability: 'All days', linkedin: 'https://www.linkedin.com/in/ena-gupta-5150a3128/', image: 'ena-gupta.jpg' },
   ];
 
   const buildCard = (e) => {

@@ -12,18 +12,6 @@
     "image": "lakshmi-jain.jpg"
   },
   {
-    "name": "Dr. R L Ravishankar",
-    "title": "Psychologist",
-    "age": "62",
-    "experience": "32 years",
-    "contact": "+91 984 104 3308",
-    "email": "",
-    "fee": "₹500/session",
-    "availability": "Weekdays",
-    "linkedin": "https://www.linkedin.com/in/dr-ravi-shankar-5bb1b696/",
-    "image": "dr-rl-ravishankar.jpg"
-  },
-  {
     "name": "Dr. Suja M K",
     "title": "Mental Health Consultant",
     "age": "54",
@@ -34,30 +22,6 @@
     "availability": "Saturday, Sunday",
     "linkedin": "https://www.linkedin.com/in/dr-suja-m-k-ph-d-b2298a7b/",
     "image": "dr-suja-mk.jpg"
-  },
-  {
-    "name": "Purva Dixit",
-    "title": "Clinical Psychologist",
-    "age": "47",
-    "experience": "22 years",
-    "contact": "+91 901 103 3772",
-    "email": "",
-    "fee": "₹750/session",
-    "availability": "Weekdays, Saturday",
-    "linkedin": "https://www.linkedin.com/in/purva-dixit-55a46b48/",
-    "image": "purva-dixit.jpg"
-  },
-  {
-    "name": "Ena Gupta",
-    "title": "Clinical Psychologist",
-    "age": "30",
-    "experience": "8 years",
-    "contact": "+91 981 142 9266",
-    "email": "",
-    "fee": "₹600/session",
-    "availability": "All days",
-    "linkedin": "https://www.linkedin.com/in/ena-gupta-5150a3128/",
-    "image": "ena-gupta.jpg"
   },
   {
     "name": "Masiha Shabeer",
@@ -72,16 +36,28 @@
     "image": "masiha-shabeer.jpg"
   },
   {
-    "name": "Mridhula Maha",
-    "title": "Counselling Psychologist",
-    "age": "27",
-    "experience": "5 years",
-    "contact": "+91 994 144 9029",
+    "name": "Dr. R L Ravishankar",
+    "title": "Psychologist",
+    "age": "62",
+    "experience": "32 years",
+    "contact": "+91 984 104 3308",
     "email": "",
-    "fee": "₹600/session",
+    "fee": "₹500/session",
+    "availability": "Weekdays",
+    "linkedin": "https://www.linkedin.com/in/dr-ravi-shankar-5bb1b696/",
+    "image": "dr-rl-ravishankar.jpg"
+  },
+  {
+    "name": "Purva Dixit",
+    "title": "Clinical Psychologist",
+    "age": "47",
+    "experience": "22 years",
+    "contact": "+91 901 103 3772",
+    "email": "",
+    "fee": "₹750/session",
     "availability": "Weekdays, Saturday",
-    "linkedin": "https://www.linkedin.com/in/mridhula-maha-34a058b0/",
-    "image": "mridhula-maha.jpg"
+    "linkedin": "https://www.linkedin.com/in/purva-dixit-55a46b48/",
+    "image": "purva-dixit.jpg"
   },
   {
     "name": "Pragya Gopinath",
@@ -96,16 +72,16 @@
     "image": "pragya-gopinath.jpg"
   },
   {
-    "name": "Yukti Rastogi",
-    "title": "Psychologist",
-    "age": "24",
-    "experience": "2 years",
-    "contact": "+91 851 008 2979",
+    "name": "Ankit Satija",
+    "title": "Counselling Psychologist",
+    "age": "-",
+    "experience": "< 1 year",
+    "contact": "+91 959 958 5311",
     "email": "",
-    "fee": "₹800/session",
-    "availability": "All days",
-    "linkedin": "https://www.linkedin.com/in/yukti-rustagi/",
-    "image": "yukti-rastogi.jpg"
+    "fee": "₹650/session",
+    "availability": "Weekdays",
+    "linkedin": "https://www.linkedin.com/in/ankit-satija/",
+    "image": "ankit-satija2.jpg"
   },
   {
     "name": "Vidhi Sharma",
@@ -120,18 +96,6 @@
     "image": "vidhi-sharma.jpg"
   },
   {
-    "name": "Harshita Jain",
-    "title": "Clinical Psychologist",
-    "age": "24",
-    "experience": "1 year",
-    "contact": "+91 970 694 1993",
-    "email": "",
-    "fee": "₹1400/session (Sliding scale)",
-    "availability": "All days",
-    "linkedin": "https://www.linkedin.com/in/harshita-jain-cp/",
-    "image": "harshita-jain.jpg"
-  },
-  {
     "name": "Zeba Hussain",
     "title": "Clinical Psychologist",
     "age": "22",
@@ -144,15 +108,51 @@
     "image": "zeba-hussain.jpg"
   },
   {
-    "name": "Ankit Satija",
-    "title": "Counselling Psychologist",
-    "age": "-",
-    "experience": "< 1 year",
-    "contact": "+91 959 958 5311",
+    "name": "Ena Gupta",
+    "title": "Clinical Psychologist",
+    "age": "30",
+    "experience": "8 years",
+    "contact": "+91 981 142 9266",
     "email": "",
-    "fee": "₹650/session",
-    "availability": "Weekdays",
-    "linkedin": "https://www.linkedin.com/in/ankit-satija/",
-    "image": "ankit-satija2.jpg"
+    "fee": "₹600/session",
+    "availability": "All days",
+    "linkedin": "https://www.linkedin.com/in/ena-gupta-5150a3128/",
+    "image": "ena-gupta.jpg"
+  },
+  {
+    "name": "Mridhula Maha",
+    "title": "Counselling Psychologist",
+    "age": "27",
+    "experience": "5 years",
+    "contact": "+91 994 144 9029",
+    "email": "",
+    "fee": "₹600/session",
+    "availability": "Weekdays, Saturday",
+    "linkedin": "https://www.linkedin.com/in/mridhula-maha-34a058b0/",
+    "image": "mridhula-maha.jpg"
+  },
+  {
+    "name": "Yukti Rastogi",
+    "title": "Psychologist",
+    "age": "24",
+    "experience": "2 years",
+    "contact": "+91 851 008 2979",
+    "email": "",
+    "fee": "₹800/session",
+    "availability": "All days",
+    "linkedin": "https://www.linkedin.com/in/yukti-rustagi/",
+    "image": "yukti-rastogi.jpg"
+  },
+  {
+    "name": "Harshita Jain",
+    "title": "Clinical Psychologist",
+    "age": "24",
+    "experience": "1 year",
+    "contact": "+91 970 694 1993",
+    "email": "",
+    "fee": "₹1400/session (Sliding scale)",
+    "availability": "All days",
+    "linkedin": "https://www.linkedin.com/in/harshita-jain-cp/",
+    "image": "harshita-jain.jpg"
   }
 ]
