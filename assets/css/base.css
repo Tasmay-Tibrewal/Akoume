@@ -82,7 +82,7 @@ header.site-header .container { max-width: var(--container-w-header); padding-in
 header.site-header .container { padding-inline: var(--space-1); } /* further reduce side margins equally */
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: var(--space-4); }
 .brand { display: flex; align-items: center; gap: var(--space-3); }
-.brand img { height: 55px; width: auto; }
+.brand img { height: 50px; width: auto; }
 .brand-title { font-weight: 700; letter-spacing: 0.02em; margin-bottom: 0px;}
 .nav-links { display: flex; align-items: center; gap: var(--space-3); }
 .nav-links a {
@@ -163,7 +163,7 @@ footer.site-footer .container { padding-inline: var(--space-1); }
   display: grid;
   gap: var(--space-6);
   /* Rebalance: more room for text, compact nav near middle-left; nav may wrap to 2 rows */
-  grid-template-columns: minmax(580px, 1fr) minmax(240px, 360px) auto;
+  grid-template-columns: minmax(550px, 1fr) minmax(270px, 390px) auto;
   align-items: start; /* align columns to top to remove extra gap above nav buttons */
 }
 
@@ -498,3 +498,169 @@ footer.site-footer .social { display: flex; justify-content: flex-end; align-sel
 
 /* Tighten spacing before the Resources section */
 #work-text { padding-top: var(--space-4); }
+
+/* Header dropdown (Resources) */
+.nav-links .dropdown { position: relative; }
+.nav-links .dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: inherit;
+  font-weight: 600; /* unify with other nav items */
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+.nav-links .dropdown-toggle:is(:hover, :focus-visible) {
+  text-decoration: none;
+  color: var(--color-primary-600);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.55)),
+    rgba(58,147,129,0.26);
+  border-color: rgba(58,147,129,0.32);
+  box-shadow: 0 2px 8px rgba(58,147,129,0.12),
+              inset 0 1px 0 rgba(255,255,255,0.35);
+  outline: none;
+}
+/* Simple triangle caret (rotate for open; constant baseline to avoid vertical shift) */
+.nav-links .dropdown .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid currentColor; /* triangle */
+  opacity: 0.95;
+  font-size: 0; /* hide any glyph in span */
+  line-height: 0;
+  vertical-align: middle;
+  align-self: center; /* ensure vertical centering within flex */
+  transform: translateY(0px) rotate(0deg);
+  transition: transform 150ms ease;
+}
+.nav-links .dropdown.open .caret {
+  transform: translateY(0.5px) rotate(180deg);
+}
+
+/* Desktop/Mobile labels for Resources */
+.nav-links .dropdown-toggle .res-label-desktop { display: inline; }
+.nav-links .dropdown-toggle .res-label-mobile { display: none; }
+
+@media (max-width: 960px) {
+  .nav-links .dropdown-toggle .res-label-desktop { display: none; }
+  .nav-links .dropdown-toggle .res-label-mobile { display: inline; }
+}
+
+/* Glassy dropdown panel */
+.nav-links .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px; /* visual offset without hover gap */
+  min-width: 260px;
+  background: rgba(219,239,237,0.85); /* match site bg color (#dbefed) with stronger opacity */
+  -webkit-backdrop-filter: saturate(1.15) blur(8px);
+  backdrop-filter: saturate(1.15) blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  align-items: stretch; /* let separator span full width */
+  z-index: 1000;
+}
+.nav-links .dropdown.open .dropdown-menu { display: flex; }
+/* Desktop :hover auto-open removed to allow proper click-toggle close while hovered (handled via JS hover-intent) */
+
+.dropdown-menu .dropdown-item {
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center; /* center each item horizontally */
+}
+.dropdown-menu .dropdown-item:is(:hover, :focus-visible) {
+  background: var(--color-primary-50);
+  text-decoration: none;
+  outline: none;
+}
+.dropdown-menu .dropdown-sep {
+  height: 1px;
+  width: 100%;
+  background: rgba(16,24,23,0.22); /* stronger for visibility on glass */
+  margin: 8px 4px;
+  border-radius: 1px;
+}
+
+@media (max-width: 960px) {
+  .nav-links .dropdown { width: 100%; }
+  /* Make 'Resources' a non-interactive section title on mobile */
+  .nav-links .dropdown-toggle {
+    /* Make it look like other nav links on mobile */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-weight: 600; /* match other items' weight; Repository remains bold via <strong> */
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    margin-bottom: 4px; /* small, consistent gap before the inline list */
+  }
+  .nav-links .dropdown .caret { display: none; }
+  /* Inline the menu items as regular links under the title */
+  .nav-links .dropdown-menu {
+    position: static;
+    display: flex !important;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 8px; /* small separation from label */
+  }
+  /* Hide non-mobile items: Overview, Videos, Newsletter, Helplines, and the separator */
+  .nav-links .dropdown-menu .dropdown-sep { display: none; }
+  .nav-links .dropdown-menu .dropdown-item:nth-of-type(1),  /* Overview */
+  .nav-links .dropdown-menu .dropdown-item:nth-of-type(5),  /* Podcasts & Videos */
+  .nav-links .dropdown-menu .dropdown-item:nth-of-type(7) { /* Helplines */
+    display: none;
+  }
+}
+/* Mobile nav overrides for Resources pill and list alignment */
+@media (max-width: 960px) {
+  /* Make the Resources label look and align like other nav pills */
+  .nav-links .dropdown-toggle {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-weight: 600; /* match other items; Repository stays bold via &lt;strong&gt; */
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    margin-bottom: 2px; /* small, consistent gap before inline list */
+  }
+
+  /* Center the inline list and tighten spacing under the label */
+  .nav-links .dropdown-menu {
+    width: 100%;
+    margin-top: 2px !important; /* override earlier values */
+  }
+
+  /* Keep only: Repository, Psychologists, Blogs, Newsletter (hide Overview, Videos, Helplines) */
+  .nav-links .dropdown-menu .dropdown-sep { display: none !important; }
+  .nav-links .dropdown-menu .dropdown-item:nth-of-type(1),  /* Overview */
+  .nav-links .dropdown-menu .dropdown-item:nth-of-type(5),  /* Podcasts & Videos */
+  .nav-links .dropdown-menu .dropdown-item:nth-of-type(7) { /* Helplines */
+    display: none !important;
+  }
+}
