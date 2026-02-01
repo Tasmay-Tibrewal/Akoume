@@ -86,14 +86,37 @@
       transform: translate(calc(-50% + 1px), -50%) rotate(135deg);
     }
 
-    /* 4) Mindful Meadows: make 4 cards fit and reduce size (~75%) */
-    /* Remove global min-width clamp so 4 columns can shrink */
-    #mindful-meadows .carousel-track > * {
-      min-width: 0 !important;
+    /* 4) Mindful Meadows: paginate blogs (4 columns x 2 rows per "page") */
+    #mindful-meadows .carousel-track {
+      gap: 0; /* pages are full-width; internal grid handles spacing */
+      padding-inline: 0;
+      scroll-padding-inline: 0;
+      scroll-snap-type: x mandatory;
     }
-    /* Ensure exactly 4 columns within the viewport width */
-    #mindful-meadows .carousel.cols-4 .carousel-track {
-      grid-auto-columns: minmax(200px, calc((100% - (var(--space-5) * 3)) / 4));
+    #mindful-meadows .carousel-page {
+      flex: 0 0 100%;
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(2, auto);
+      gap: var(--space-5);
+      /* Slight inset so shadows from the previous page don't "ghost" into the next page */
+      padding: 4px 5px var(--space-2);
+      align-content: start;
+      scroll-snap-align: start;
+      overflow: hidden;
+    }
+    @media (max-width: 960px) {
+      #mindful-meadows .carousel-page {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 680px) {
+      #mindful-meadows .carousel-page {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-inline: 8px;
+      }
     }
 
     /* Small screens: keep chevrons slightly inset to avoid clipping */
@@ -433,34 +456,45 @@
     <section id="mindful-meadows" class="container mt-4">
       <h2 class="display-2">Mindful Meadows</h2>
       <p class="muted mt-1">Blogs and articles that discuss different aspects of mental health. (Tap the card)</p>
-      <div class="carousel rows-2 cols-4 mt-2" data-carousel>
+      <div class="carousel mt-2" data-carousel>
         <button class="carousel-btn prev" type="button" aria-label="Previous" data-prev>&lsaquo;</button>
         <div class="carousel-viewport">
           <div class="carousel-track" data-track>
-            <a class="card card-hover" href="https://akoume.in/blogs/the_silent_epidemic.html" aria-label="The Silent Epidemic">
-              <img src="../assets/img/4.png" alt="Blog cover: The Silent Epidemic" loading="lazy" />
-            </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/breaking_the_silence.html" aria-label="Breaking the Silence">
-              <img src="../assets/img/2.png" alt="Blog cover: Breaking the Silence" loading="lazy" />
-            </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/hidden_struggle.html" aria-label="Hidden Struggle">
-              <img src="../assets/img/3.png" alt="Blog cover: Hidden Struggle" loading="lazy" />
-            </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/why_do_we_lose_credibility.html" aria-label="Why Do We Lose Credibility">
-              <img src="../assets/img/1.png" alt="Blog cover: Why Do We Lose Credibility" loading="lazy" />
-            </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/the_pressure_cooker.html" aria-label="The Pressure Cooker">
-              <img src="../assets/img/5.png" alt="Blog cover: The Pressure Cooker" loading="lazy" />
-            </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/live_in_the_now.html" aria-label="Live in the Now">
-              <img src="../assets/img/6.png" alt="Blog cover: Live in the Now" loading="lazy" />
-            </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/shadows_of_the_mind.html" aria-label="Shadows of the Mind">
-              <img src="../assets/img/7.png" alt="Blog cover: Shadows of the Mind" loading="lazy" />
-            </a>
-            <a class="card card-hover" href="https://akoume.in/blogs/toxic_masculinity.html" aria-label="Toxic Masculinity">
-              <img src="../assets/img/8.png" alt="Blog cover: Toxic Masculinity" loading="lazy" />
-            </a>
+            <div class="carousel-page" role="group" aria-label="Blogs page 1">
+              <a class="card card-hover" href="https://akoume.in/blogs/high_functioning_burnout.html" aria-label="High-Functioning Burnout">
+                <img src="../assets/img/10.png" alt="Blog cover: High-Functioning Burnout" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/growing_up_under_watch.html" aria-label="Growing Up Under Watch">
+                <img src="../assets/img/9.png" alt="Blog cover: Growing Up Under Watch" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/the_silent_epidemic.html" aria-label="The Silent Epidemic">
+                <img src="../assets/img/4.png" alt="Blog cover: The Silent Epidemic" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/breaking_the_silence.html" aria-label="Breaking the Silence">
+                <img src="../assets/img/2.png" alt="Blog cover: Breaking the Silence" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/hidden_struggle.html" aria-label="Hidden Struggle">
+                <img src="../assets/img/3.png" alt="Blog cover: Hidden Struggle" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/why_do_we_lose_credibility.html" aria-label="Why Do We Lose Credibility">
+                <img src="../assets/img/1.png" alt="Blog cover: Why Do We Lose Credibility" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/the_pressure_cooker.html" aria-label="The Pressure Cooker">
+                <img src="../assets/img/5.png" alt="Blog cover: The Pressure Cooker" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/live_in_the_now.html" aria-label="Live in the Now">
+                <img src="../assets/img/6.png" alt="Blog cover: Live in the Now" loading="lazy" />
+              </a>
+            </div>
+
+            <div class="carousel-page" role="group" aria-label="Blogs page 2">
+              <a class="card card-hover" href="https://akoume.in/blogs/shadows_of_the_mind.html" aria-label="Shadows of the Mind">
+                <img src="../assets/img/7.png" alt="Blog cover: Shadows of the Mind" loading="lazy" />
+              </a>
+              <a class="card card-hover" href="https://akoume.in/blogs/toxic_masculinity.html" aria-label="Toxic Masculinity">
+                <img src="../assets/img/8.png" alt="Blog cover: Toxic Masculinity" loading="lazy" />
+              </a>
+            </div>
           </div>
         </div>
         <button class="carousel-btn next" type="button" aria-label="Next" data-next>&rsaquo;</button>

@@ -31,7 +31,9 @@ Akoume-New-Website/
 │  ├─ live_in_the_now.html
 │  ├─ shadows_of_the_mind.html
 │  ├─ the_pressure_cooker.html
-│  ├─ toxic_masculinity.html
+│  ├─ growing_up_under_watch.html
+|  ├─ high_functioning_burnout.html
+|  ├─ toxic_masculinity.html
 │  └─ why_do_we_lose_credibility.html
 ├─ assets/
 │  ├─ css/

@@ -82,7 +82,8 @@ header.site-header .container { max-width: var(--container-w-header); padding-in
 header.site-header .container { padding-inline: var(--space-1); } /* further reduce side margins equally */
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: var(--space-4); }
 .brand { display: flex; align-items: center; gap: var(--space-3); }
-.brand img { height: 50px; width: auto; }
+header.site-header .brand { margin-left: 10px; } /* add small left margin to logo link */
+.brand img { height: 55px; width: auto; }
 .brand-title { font-weight: 700; letter-spacing: 0.02em; margin-bottom: 0px;}
 .nav-links { display: flex; align-items: center; gap: var(--space-3); }
 .nav-links a {

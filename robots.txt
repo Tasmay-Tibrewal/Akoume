@@ -2,3 +2,113 @@ User-agent: *
 Allow: /
 
 Sitemap: https://akoume.in/sitemap.xml
+
+Harvard University | Summer Intern | Prof. Vijay Janapa Reddi                                                                                                      [May '24 - Jun '24]
+Worked on developing Multi-modal Large Language Model (LLM) Agents for embedded and hardware systems design using SoTA methods
+•  Utilized Eleuther AI's LM evaluation harness for benchmarking GPT, Gemini, Claude and open source LLMs Llama, Mistral, MPT on the QuArch dataset
+•  Used smaller models like GPT Neo and fine-tuned it on small but high quality datasets like SQuAD and QuArch, and improved its performance by 9%
+
+
+-----------------------------------------
+
+
+Fractal AI Research | AI Research Intern                                                                                                                                               [Jun '25 - Present]
+Researching agentic coding LLMs with generative PRMs, agentic verifiers, and co-evolution frameworks to improve reasoning ability
+•  Worked with Thinking (generative) Process Reward Models that assign step-level rewards on multi-turn trajectories, enabling efficient training
+•  Designed agentic verifier models equipped with codebase graphs, gold patches, and reasoning traces to judge solver trajectories more accurately
+•  Training models via novel co-evolution framework, where the solver, verifier LLMs iteratively improve each other by rewards and performance gains
+
+
+Harvard University | Research Intern | Prof. Vijay Janapa Reddi                                                                                                     [May '24 - Jun '24]
+Trained domain-specific LLMs for hardware design tasks, targeting low-cost open-source SLMs as alternatives to frontier models
+•  Generated domain QA data from curated sources using GPT-4o, with difficulty tags, integrated CoT reasoning, and RAG-based context to support SFT
+•  Trained GPT-Neo, Llama-3, Mixtral-8x7B first with SFT, then with DPO using GPT-4o preference labels (prompt engineered with reference samples)
+•  Optimized performance over 13K examples with multiple rollouts, achieving accuracy comparable to GPT-4o and Claude 3.5 Sonnet with Mixtral
+
+
+WorldQuant | Research Consultant                                                                                                                                                       [Apr '24 - Present]
+Engineered trading strategies on fundamental indicators along with momentum and mean-reversion based approaches for alpha discovery
+•  Selected as Research Consultant after securing a global top-200 rank (2nd rank at IIT Kharagpur) with 42K+ points in quantitative alpha research
+•  Advanced to the 2nd round of the International Quant Championship, with 1500+ alphas simulated and evaluated across diverse datasets and universes
+
+
+-----------------------------------------
+
+
+Latent Reasoning in LLMs | Bachelor Thesis Project | Prof. Pawan Goyal                                                                                       [Jul '25 - Present]
+Exploring novel paradigms to extend LLMs beyond next-token prediction by enabling abstract reasoning in continuous latent spaces
+•  Designed architecture for Latent Transformers which reason in continuous latent vector spaces via mapping layer, reducing discretization loss
+•  Built staged training pipelines integrating supervised mapping layer training, SFT (partial/full) and RL with discrete and continuous backpropagation
+•  Enabled complex thought abstraction by chaining latent steps during training, improving multi-step foresight and complex problem-solving ability
+
+
+tokeniser-py | Open-source Tokenizer Library                                                                                                                                     [Mar '25 - Apr '25]
+Developed a novel (non-BPE) tokenizer created on 1B+ SlimPajama tokens, released as a Python library with 131K-token vocabulary
+•  Created a novel tokenizer algorithm designed to prioritize semantic representation, vocabulary diversity, leveraging a large 1B-token base corpus
+•  Achieved 2–3% better compactness than GPT-4o’s tokenizer on alphanumeric English, despite having 65.5% vocabulary size and 35% shorter token size
+
+
+4D Scene Reconstruction | Research Reproducibility Project | Machine Learning Reproducibility Challenge (MLRC)           [Dec '23 - Feb '24]
+•  Reproduced HexPlane (CVPR '23) results, validating its 140x speedup over NeRFs, and benchmarked it against K-Planes and 4D Gaussian Splatting
+•  Conducted ablation studies on factorization, feature-planes, fusion designs, and integrated temporal smoothness loss to enhance generation stability
+
+
+-----------------------------------------
+
+
+•  Invited as a Customer Advisory Board Member at SambaNova AI ($5B+), providing inputs on product roadmaps from a founder/researcher perspective
+•  Selected for Google’s Gemma models user study, providing feedback to Gemma, Kaggle teams on developer/research use-cases and product strategy
+•  Secured All India Rank (AIR) 5691 in JEE Advanced and achieved 100th percentile in Physics for JEE Mains among over one million registered candidates
+•  Contributed to open-source projects: 4D Gaussian Splatting [CVPR '24] (colab demo), LiteLLM (PR), Unsloth (bug fix), & ByteDance’s Trae-Agent (PR)
+
+-----------------------------------------
+
+
+Inter IIT Technology Meet 12.0 | Gold | Tool-use in LLMs | DevRev                                                                                               [Nov '23 - Dec '23]
+•  Engineered RTaC (Re-imagining tooling as coding) framework, allowing tool-use-via-code, achieving 17% improvement, surpassing SOTA techniques
+•  Trained open-source models to execute dynamic, conditional, iterative & path-optimal tool-use, including multi-tool execution within a single call
+•  Fine-tuned DeepSeek-1.3B and Code Llama-7B with LoRA SFT & DPO, achieving 78% performance boost, being 5.7x cheaper & 8% better than GPT-4
+
+
+Kharagpur Data Science Hackathon | Gold | Research Paper Publishability | Pathway                                                                                [Jan '25]
+•  Built TACC (ToT Actor-contrastive CoT Critic), a reasoning agent for research publishability assessment, achieving 92% accuracy with an 18% gain
+•  Designed SCHOLAR, a conference recommendation agent using Semantic Scholar’s 190M-paper search API & abstract similarity matching on top results
+•  Developed SCRIBE, a reasoning-based voting model with 90% accuracy (~5% gains), integrating SCHOLAR, a RAG pipeline and a cookbook-style LLM
+
+
+Smart India Hackathon | National Finalist | Insurance Fraud Detection | Bajaj Finserv Health Ltd                                                            [Dec '23]
+•  Built a fraud detection pipeline using Intern-VL, LayoutLM, Llama, and GPT-4 to validate structure, text, and semantic consistency in claims
+•  Applied CNNs and U-Nets for tampering detection and region segmentation, training on synthetically generated fakes from the DocTamper dataset
+
+-----------------------------------------
+
+
+Zyke | Co-founder | AI Copilot for Marketing                                                                                                                                       [Jul '24 - May '25]
+Zyke is an AI marketing copilot integrating analytics, brand voice modeling, ideation and multimodal content generation into a unified dashboard
+•  Secured $30K+ in cloud credit grants from CampusFund and startup programs (AWS, Azure, GCP, Modal, Mongo DB) for model training & deployment
+•  Selected for SambaNova’s startup accelerator and invited as a Customer Advisory Board (CAB) member to share product and developer feedback
+•  Shipped MVP: built brand-voice builder, trend detection and recommendation engine, and end-to-end ideation-to-content pipeline (FLUX, o1-mini)
+•  Created an image editor with interactive segmentation, inpainting, and prompt-based editing, along with a multimodal content repurposing pipeline
+
+
+-----------------------------------------
+
+
+Autonomous Ground Vehicles Research Group (AGV) | Undergraduate Researcher                                                                  [Aug '23 - Present]
+•  Worked with ROS on U-Penn’s F1-TENTH autonomous racing frameworks, implementing labs and applying path-planning, vision and control algorithms
+•  Gained expertise in CNNs, GANs, RNNs, and NeRFs through UC Berkeley’s CS-182 and Stanford’s CS-229, applying concepts in the MLRC competition
+
+
+-----------------------------------------
+
+
+Ernst & Young (EY) | Summer Intern | Technical Consulting                                                                                                             [May '24 - Jun '24]
+Built AI solutions for agricultural clients APEDA and Tanzania’s Ministry of Agriculture, targeting export quality and farmer education
+•  Architected a fertilizer intelligence system for APEDA supporting recommendation, inventory forecasting, and substandard product flagging
+•  Deployed a Llama agent for Tanzania’s Ministry of Agriculture to provide farmer education in local languages with database and tool access
+
+
+Tata Steel | Winter Intern | Image Analytics                                                                                                                                       [Dec '23 - May '24]
+Built computer vision pipelines for automated diagram analysis of Bar Bending Schedule (BBS) drawings in large-scale steel bar production
+•  Applied Shi-Tomasi and Harrison corner detection algorithms for bend identification, angle mapping, and overlap detection in structural diagrams
+•  Used models like SW-CNNs and U-Nets for digit removal and recognition in scanned drawings of steel bars, achieving over 96% recognition accuracy
